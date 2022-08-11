@@ -1,0 +1,739 @@
+.oneScreenContent {
+  // background: #0f294d url(https://img.58cdn.com.cn/dist/jxt/images/screen/bg.jpg) no-repeat center;
+  // background-size: 100% 100%;
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99999999;
+  font-size: 16px;
+  color: #fff;
+  box-sizing: border-box;
+  // 考试数据分析
+  .examinee_portal_container {
+    // position: fixed;
+    // top: 0;
+    // z-index: 9999;
+    // width: 100%;
+    // height: 100%;
+    // overflow-x: hidden;
+    // overflow-y: scroll;
+    // font-family: GemunuLibre-Bold;
+
+    // display: flex;
+    // z-index: 9999;
+    // width: 100%;
+    // height: 100%;
+    // font-family: GemunuLibre-Bold;
+    // border: 1px solid red;
+
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: GemunuLibre-Bold;
+    // border: 1px solid red;
+
+    /* 考试数据分析头部*/
+    .examinee_portal_title {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: space-between;
+      height: 98px;
+      padding: 0 50px;
+      // border: 1px solid yellow;
+      // outline: 1px solid red;
+      // box-sizing: content-box;
+      .left,
+      .center,
+      .right {
+        flex: 1;
+        color: #badfff;
+        font-size: 18px;
+        // line-height: 98px;
+      }
+
+      .left {
+      }
+      .center {
+        // width: 490px;
+        color: #ffffff;
+        font-size: 40px;
+        text-align: center;
+        font-family: HYYaKuHei-85J;
+      }
+      .right {
+        text-align: right;
+      }
+    }
+
+    /* 分割线 */
+    .examinee_portal_line {
+      font-size: 0; // 勿删, 影响图片高度计算
+      display: flex;
+      justify-content: center;
+      img {
+        width: 100%;
+      }
+      // margin: 10px 0;
+    }
+    .swiper-box {
+      /* 数字描述部分 */
+      .number_desc_container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 30px;
+        .left {
+          display: flex;
+          align-items: center;
+          // margin-left: 50px;
+
+          .left_period {
+            width: 30px;
+            height: 82px;
+            margin-right: 20px;
+            text-align: center;
+            background: #1d304c;
+            border-radius: 4px;
+            span {
+              height: 41px;
+              color: #badfff;
+              font-weight: bold;
+              font-size: 16px;
+              font-family: PingFang SC;
+              line-height: 41px;
+            }
+          }
+        }
+        .right {
+          // margin-right: 50px;
+        }
+
+        .left,
+        .second,
+        .third,
+        .right {
+          // margin-top: 30px;
+          color: #ffffff;
+
+          .top {
+            color: #badfff;
+            font-weight: bold;
+            font-size: 22px;
+            font-family: PingFang SC;
+          }
+          .bottom {
+            font-weight: bold;
+            font-size: 50px;
+            font-family: Gemunu Libre;
+          }
+        }
+      }
+    }
+    /* echarts 图表部分  */
+    .examinee_charts_container {
+      // border: 1px solid green;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      margin: 10px;
+      box-sizing: border-box;
+      height: 0;
+      // 图表公共部分样式
+      .top_container {
+        display: flex;
+        flex: 1;
+        justify-content: space-between;
+        // padding: 10px 30px;
+        box-sizing: border-box;
+        height: 0;
+        .bottom_container {
+          display: flex;
+          flex: 1;
+          // border: 1px solid #fff;
+          box-sizing: border-box;
+
+          // justify-content: space-between;
+        }
+      }
+      .top_container,
+      .bottom_container {
+        // margin: 20px 30px;
+
+        /* top和bottom 每个 echarts 图的公共样式 */
+        .top_left,
+        .bottom_slide1_left,
+        .bottom_slide2_left,
+        .bottom_slide1_center,
+        .top_right,
+        .bottom_slide1_right,
+        .bottom_slide2_right {
+          flex: 1;
+          position: relative;
+          /** 剩余空间太大的时候, list 均分剩余空间 */
+          // flex-grow: 1;
+          // width: 600px;
+          // height: 377px;
+          margin-right: 10px;
+          background: #0b2247;
+          border: 1px solid rgba(47, 146, 214, 0.6);
+          //opacity: 0.4;
+
+          /* 每个框的四个角的着色 */
+          .left_top,
+          .right_top,
+          .right_bottom,
+          .left_bottom {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+          }
+
+          .left_top {
+            top: -1px;
+            left: -1px;
+            border-top: 2px solid rgba(47, 146, 214, 1);
+            border-left: 2px solid rgba(47, 146, 214, 1);
+          }
+          .right_top {
+            top: -1px;
+            right: -1px;
+            border-top: 2px solid rgba(47, 146, 214, 1);
+            border-right: 2px solid rgba(47, 146, 214, 1);
+          }
+          .right_bottom {
+            right: -1px;
+            bottom: -1px;
+            border-right: 2px solid rgba(47, 146, 214, 1);
+            border-bottom: 2px solid rgba(47, 146, 214, 1);
+          }
+          .left_bottom {
+            bottom: -1px;
+            left: -1px;
+            border-bottom: 2px solid rgba(47, 146, 214, 1);
+            border-left: 2px solid rgba(47, 146, 214, 1);
+          }
+
+          /* 图表title */
+          .each_car_type_number_title,
+          .examination_information_analysis_title,
+          .each_car_type_number_line,
+          .examination_information_analysis_line {
+            width: 225px;
+            height: 21px;
+            margin-top: 23px;
+            margin-left: 23px;
+            color: #badfff;
+            font-weight: bold;
+            font-size: 22px;
+            font-family: PingFang SC;
+            line-height: 23px;
+          }
+
+          .each_car_type_number_line,
+          .examination_information_analysis_line {
+            height: 2px;
+            margin-top: 5px;
+            background: #badfff;
+          }
+
+          .examination_information_analysis_line {
+            width: 135px;
+          }
+        }
+
+        .bottom_slide1_right,
+        .bottom_slide2_right {
+          margin-right: 0px; // 去掉右侧外边距
+        }
+        .top_right,
+        .bottom_right {
+          margin-right: 0; // 最后一个元素右外边距为 0
+        }
+
+        /* 数据部分公共样式 */
+        .flex-reset {
+          display: flex;
+          flex: 1;
+          box-sizing: border-box;
+          .each_car_type_number,
+          .examination_information_analysis {
+            width: 100%;
+            height: 100%;
+          }
+        }
+        // .each_car_type_number,
+        // .examination_information_analysis {
+        //   width: 100%;
+        //   height: 90%;
+        // }
+      }
+
+      // 图表下半部分样式
+      .bottom_container {
+        .bottom_slide1_left,
+        .bottom_slide2_left,
+        .bottom_slide1_center,
+        .bottom_slide1_right,
+        .bottom_slide2_right {
+          flex-grow: 1;
+          // width: 600px;
+
+          /* title 文字描述部分 */
+          .examination_stage_number_title,
+          .arrearage_information_title,
+          .examination_full_score_number_title,
+          .driving_school_passing_rate_title,
+          .examination_room_passing_rate_title {
+            height: 22px;
+            margin-top: 23px;
+            margin-left: 23px;
+            color: #badfff;
+            font-weight: bold;
+            font-size: 22px;
+            font-family: PingFang SC;
+            line-height: 23px;
+          }
+
+          /* title 下的下划线 */
+          .examination_stage_number_line,
+          .arrearage_information_line,
+          .examination_full_score_number_line,
+          .driving_school_passing_rate_line,
+          .examination_full_score_number_line,
+          .examination_room_passing_rate_line {
+            height: 2px;
+            margin-top: 5px;
+            margin-left: 23px;
+            background: #badfff;
+          }
+
+          // 考试阶段
+          .examination_stage_number_title,
+          .examination_stage_number_line {
+            width: 158px;
+          }
+          //欠费情况
+          .arrearage_information_title,
+          .arrearage_information_line {
+            width: 89px;
+          }
+          // 满分人数占比
+          .examination_full_score_number_title,
+          .examination_full_score_number_line {
+            width: 180px;
+          }
+          // 驾校通过率排行榜
+          .driving_school_passing_rate_title,
+          .driving_school_passing_rate_line {
+            width: 180px;
+          }
+
+          // 考场通过率排行榜
+          .examination_room_passing_rate_title,
+          .examination_room_passing_rate_line {
+            width: 180px;
+          }
+        }
+
+        .bottom_slide1_left,
+        .bottom_slide2_left {
+          .examineation_stage_number_chart {
+            width: 100%;
+            // height: 90%;
+          }
+          .driving_school_passing_rate_chart {
+            width: 100%;
+            // height: 90%;
+          }
+        }
+        .bottom_slide1_center {
+          .arrearage_information_container {
+            display: flex;
+            width: 100%;
+            height: 100%;
+
+            .arrearage_information_desc {
+              display: flex;
+              flex-direction: column;
+              justify-content: space-evenly;
+              width: 25%;
+              // height: 80%;
+
+              .arrearage_total {
+                display: flex;
+                flex-direction: column;
+                margin-left: 20px;
+
+                .number {
+                  color: #fff;
+                  font-weight: bold;
+                  font-size: 30px;
+                  font-family: Gemunu Libre;
+                }
+                .desc {
+                  // color: #badfff;
+                  color: #fff;
+                  font-weight: bold;
+                  font-size: 18px;
+                  font-family: PingFang SC;
+                  // opacity: 0.5;
+                }
+              }
+            }
+            .arrearage_information_chart {
+              width: 100%;
+              // height: 85%;
+            }
+          }
+        }
+        .bottom_slide1_right,
+        .bottom_slide2_right {
+          .examination_full_score_number_chart {
+            width: 100%;
+            // height: 90%;
+          }
+          .examination_room_passing_rate_chart {
+            width: 100%;
+            // height: 90%;
+          }
+        }
+      }
+    }
+  }
+
+  ::-webkit-scrollbar {
+    width: inherit;
+    height: inherit;
+  }
+}
+
+// 下面是样式重构代码
+
+.threeRow {
+  display: flex;
+  flex: 1;
+  margin: 0 10px;
+  box-sizing: border-box;
+  overflow: hidden;
+  // height: 0;
+  .bottom_container {
+    display: flex;
+    flex: 1;
+    height: 100%;
+    // height: 0;
+    // border: 1px solid #fff;
+    box-sizing: border-box;
+    // margin: 20px 30px;
+
+    /* top和bottom 每个 echarts 图的公共样式 */
+    .top_left,
+    .bottom_slide1_left,
+    .bottom_slide2_left,
+    .bottom_slide1_center,
+    .top_right,
+    .bottom_slide1_right,
+    .bottom_slide2_right {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      position: relative;
+      /** 剩余空间太大的时候, list 均分剩余空间 */
+      // flex-grow: 1;
+      // width: 600px;
+      // height: 377px;
+      margin-right: 10px;
+      background: #0b2247;
+      border: 1px solid rgba(47, 146, 214, 0.6);
+      //opacity: 0.4;
+
+      /* 每个框的四个角的着色 */
+      .left_top,
+      .right_top,
+      .right_bottom,
+      .left_bottom {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+      }
+
+      .left_top {
+        top: -1px;
+        left: -1px;
+        border-top: 2px solid rgba(47, 146, 214, 1);
+        border-left: 2px solid rgba(47, 146, 214, 1);
+      }
+      .right_top {
+        top: -1px;
+        right: -1px;
+        border-top: 2px solid rgba(47, 146, 214, 1);
+        border-right: 2px solid rgba(47, 146, 214, 1);
+      }
+      .right_bottom {
+        right: -1px;
+        bottom: -1px;
+        border-right: 2px solid rgba(47, 146, 214, 1);
+        border-bottom: 2px solid rgba(47, 146, 214, 1);
+      }
+      .left_bottom {
+        bottom: -1px;
+        left: -1px;
+        border-bottom: 2px solid rgba(47, 146, 214, 1);
+        border-left: 2px solid rgba(47, 146, 214, 1);
+      }
+
+      /* 图表title */
+      .each_car_type_number_title,
+      .examination_information_analysis_title,
+      .each_car_type_number_line,
+      .examination_information_analysis_line {
+        width: 225px;
+        height: 21px;
+        margin-top: 23px;
+        margin-left: 23px;
+        color: #badfff;
+        font-weight: bold;
+        font-size: 22px;
+        font-family: PingFang SC;
+        line-height: 23px;
+      }
+
+      .each_car_type_number_line,
+      .examination_information_analysis_line {
+        height: 2px;
+        margin-top: 5px;
+        background: #badfff;
+      }
+
+      .examination_information_analysis_line {
+        width: 135px;
+      }
+    }
+
+    .bottom_slide1_right,
+    .bottom_slide2_right {
+      margin-right: 0px; // 去掉右侧外边距
+    }
+    .top_right,
+    .bottom_right {
+      margin-right: 0; // 最后一个元素右外边距为 0
+    }
+
+    /* 数据部分公共样式 */
+    .flex-reset {
+      display: flex;
+      flex: 1;
+      box-sizing: border-box;
+      .examineation_stage_number_chart,
+      .arrearage_information_chart,
+      .examination_full_score_number_chart {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    // .each_car_type_number,
+    // .examination_information_analysis {
+    //   width: 100%;
+    //   height: 90%;
+    // }
+  }
+  .bottom_container {
+    .bottom_slide1_left,
+    .bottom_slide2_left,
+    .bottom_slide1_center,
+    .bottom_slide1_right,
+    .bottom_slide2_right {
+      flex-grow: 1;
+      // width: 600px;
+
+      /* title 文字描述部分 */
+      .examination_stage_number_title,
+      .arrearage_information_title,
+      .examination_full_score_number_title,
+      .driving_school_passing_rate_title,
+      .examination_room_passing_rate_title {
+        height: 22px;
+        margin-top: 23px;
+        margin-left: 23px;
+        color: #badfff;
+        font-weight: bold;
+        font-size: 22px;
+        font-family: PingFang SC;
+        line-height: 23px;
+      }
+
+      /* title 下的下划线 */
+      .examination_stage_number_line,
+      .arrearage_information_line,
+      .examination_full_score_number_line,
+      .driving_school_passing_rate_line,
+      .examination_full_score_number_line,
+      .examination_room_passing_rate_line {
+        height: 2px;
+        margin-top: 5px;
+        margin-left: 23px;
+        background: #badfff;
+      }
+
+      // 考试阶段
+      .examination_stage_number_title,
+      .examination_stage_number_line {
+        width: 158px;
+      }
+      //欠费情况
+      .arrearage_information_title,
+      .arrearage_information_line {
+        width: 89px;
+      }
+      // 满分人数占比
+      .examination_full_score_number_title,
+      .examination_full_score_number_line {
+        width: 180px;
+      }
+      // 驾校通过率排行榜
+      .driving_school_passing_rate_title,
+      .driving_school_passing_rate_line {
+        width: 180px;
+      }
+
+      // 考场通过率排行榜
+      .examination_room_passing_rate_title,
+      .examination_room_passing_rate_line {
+        width: 180px;
+      }
+    }
+
+    .bottom_slide1_left,
+    .bottom_slide2_left {
+      .examineation_stage_number_chart {
+        width: 100%;
+        // height: 90%;
+      }
+      .driving_school_passing_rate_chart {
+        width: 100%;
+        // height: 90%;
+      }
+    }
+    .bottom_slide1_center {
+      .arrearage_information_container {
+        display: flex;
+        width: 100%;
+        height: 100%;
+
+        .arrearage_information_desc {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-evenly;
+          // justify-content: space-around;
+          width: 25%;
+          // height: 80%;
+          .sex_ratio_divider {
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(-90deg, rgba(0, 58, 135, 0) 0%, rgba(0, 58, 135, 0.98) 51%, rgba(0, 58, 135, 0) 100%);
+          }
+          .arrearage_total {
+            // display: flex;
+            // flex-direction: column;
+            margin-left: 20px;
+
+            .number {
+              color: #badfff;
+              font-weight: bold;
+              font-size: 30px;
+              line-height: 34px;
+              font-family: Gemunu Libre;
+            }
+            .desc {
+              color: #badfff;
+              font-weight: bold;
+              font-size: 15px;
+              line-height: 18px;
+              font-family: PingFang SC;
+              // opacity: 0.5;
+            }
+          }
+        }
+        .arrearage_information_chart {
+          width: 100%;
+          // height: 85%;
+        }
+      }
+    }
+    .bottom_slide1_right,
+    .bottom_slide2_right {
+      .examination_full_score_number_chart {
+        width: 100%;
+        // height: 90%;
+      }
+      .examination_room_passing_rate_chart {
+        width: 100%;
+        // height: 90%;
+      }
+    }
+  }
+}
+
+.top_right,
+.top_left {
+  display: flex;
+  flex-direction: column;
+
+  .each_car_type_number_title,
+  .examination_information_analysis_title {
+    margin-top: 10px !important;
+  }
+}
+.bottom_container {
+  .examination_stage_number_title,
+  .arrearage_information_title,
+  .examination_full_score_number_title,
+  .examination_room_passing_rate_title,
+  .driving_school_passing_rate_title {
+    margin-top: 10px !important;
+    height: 21px !important;
+    span {
+      // line-height: 23px;
+      display: inline-block;
+      padding-bottom: 5px;
+      border-bottom: 2px solid #badfff;
+    }
+  }
+}
+
+// .arrearage_information_container {
+//   display: flex;
+//   flex: 1;
+//   box-sizing: border-box;
+//   .arrearage_information_desc {
+//     display: flex;
+//     flex: 1;
+//     flex-direction: column;
+//     justify-content: center;
+//     width: 40%;
+//     // height: 100%;
+
+//     .arrearage_total {
+//       display: flex;
+//       flex-direction: column;
+//       margin-left: 20px;
+
+//       .number {
+//         color: #badfff;
+//         font-weight: bold;
+//         font-size: 23px;
+//         font-family: Gemunu Libre;
+//       }
+//       .desc {
+//         color: #badfff;
+//         font-weight: bold;
+//         font-size: 10px;
+//         font-family: PingFang SC;
+//         opacity: 0.5;
+//       }
+//     }
+//   }
+// }

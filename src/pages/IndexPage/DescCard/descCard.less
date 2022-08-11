@@ -1,0 +1,400 @@
+// 第一行看板
+.index_page_card {
+  //background-color: pink;
+
+  .item_card_container {
+    /** 这种布局,适合 子元素固定宽度的时候, 比较方便 */
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-right: -8px;
+
+    .index_page_card_item1, .index_page_card_item2, .index_page_card_item3, .index_page_card_item4, .index_page_card_item5 {
+      /* 注意:!! 有时候 min-width 会造成换行时, 被剩余多余的元素会自动拉长,造成无法对其问题 */
+      /* 所以这里一般用 width 固定值就好  */
+      /* min-width: 326px; */
+      width: 326px;
+      height: 185px;
+      background-color: #FFFFFF;
+      margin: 8px 8px 0 0;
+      //background-color: lightpink;
+      /** 剩余空间太大的时候, list 均分剩余空间 */
+      flex-grow: 1;
+    }
+
+    //  动态创建的匹配 空标签
+    i {
+      /* 和列表一样的宽度相同 和 列表的margin值相同 */
+      width: 326px;
+      margin-right: 8px;
+      /** 剩余空间太大的时候, i 和 list 均分剩余空间 */
+      flex-grow: 1;
+    }
+
+    //  =========== 单个看板内部样式 ========
+    // 1. 驾校总数
+    .index_page_card_item1 {
+
+      // 上半部分数据
+      .index_page_card_item_total {
+        margin-left: 10px; // 距离左侧边距10px
+        padding-top: 24px;
+        box-sizing: border-box;
+        height: 98px;
+        //background-color: #4b5ea7;
+
+        // 驾校总数量头
+        .school_total {
+          height: 14px;
+          font-size: 14px;
+          font-family: PingFangSC-Regular, PingFang SC;
+          font-weight: 400;
+          color: rgba(0, 0, 0, 0.45);
+          line-height: 14px;
+          //background-color: pink;
+
+          .icon {
+            display: inline-block; // 初次给 内部 icon添加 display: inline-block;属性,防止下垂
+          }
+
+          .tool_tip {
+            margin-left: 8px; // icon图标距离左侧距离8px
+            line-height: 14px;
+            width: 14px;
+            height: 14px;
+            color: rgba(0, 0, 0, 0.65);
+          }
+        }
+
+        // 驾校总数 数值
+        .number {
+          margin-top: 12px;
+          height: 30px;
+          font-size: 30px;
+          font-family: HelveticaNeue;
+          color: rgba(0, 0, 0, 0.85);
+          line-height: 30px;
+
+          .home {
+            font-size: 16px;
+            font-family: PingFangSC-Regular, PingFang SC;
+            font-weight: 400;
+            color: rgba(0, 0, 0, 0.85);
+            line-height: 16px;
+          }
+        }
+      }
+
+      .index_page_card_item_school {
+        margin-left: 10px; // 距离左侧边距10px
+        height: 87px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+
+        .school_list {
+          display: flex;
+          justify-content: space-between;
+          margin-left: 2px;
+          margin-right: 21px; // 总数距离右边框21px
+
+          div {
+            .list {
+              display: inline-block;
+              width: 20px;
+              height: 20px;
+              background: #F0F2F5;
+              border-radius: 50%;
+              text-align: center;
+              line-height: 20px;
+              margin-right: 10px; // 编号距离右侧 10px
+            }
+
+            // 驾校名字
+            .school, span {
+              height: 14px;
+              font-size: 14px;
+              font-family: PingFangSC-Regular, PingFang SC;
+              font-weight: 400;
+              color: rgba(0, 0, 0, 0.65);
+              line-height: 14px;
+            }
+          }
+        }
+      }
+    }
+
+    //  2. 考场总数 card
+    .index_page_card_item2 {
+
+      // 上面半部分数据
+      .index_page_card_item_total {
+        height: 108px;
+        margin: 0 10px; // 内部左边距 10px
+        padding-top: 24px;
+        box-sizing: border-box;
+
+        .examination_room_total {
+          height: 14px;
+          font-size: 14px;
+          font-family: PingFangSC-Regular, PingFang SC;
+          font-weight: 400;
+          color: rgba(0, 0, 0, 0.45);
+          line-height: 14px;
+
+          .icon {
+            display: inline-block; // 初次给 内部 icon添加 display: inline-block;属性,防止下垂
+          }
+
+          .tool_tip {
+            margin-left: 8px; // icon 左边距 8px
+            width: 14px;
+            height: 14px;
+            color: rgba(0, 0, 0, 0.65);
+          }
+        }
+
+        // 总数
+        .number {
+          margin-top: 12px;
+          height: 30px;
+          font-size: 30px;
+          font-family: HelveticaNeue;
+          color: rgba(0, 0, 0, 0.85);
+          line-height: 30px;
+
+          span {
+            height: 16px;
+            font-size: 16px;
+            font-family: PingFangSC-Regular, PingFang SC;
+            font-weight: 400;
+            line-height: 16px;
+          }
+        }
+      }
+
+      // 分割线
+      .divider_horizontal {
+        margin-left: 10px;
+        margin-right: 10px; // 左侧边距10px
+        height: 1px;
+        background: #E8E8E8;
+        //background: red;
+      }
+
+      // 场次 人数
+      .test {
+        //background-color: green;
+        height: 76px;
+        margin: 0 10px; // 内部左边距24px
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .tested_round, .tested_number {
+          div:first-child {
+            height: 14px;
+            font-size: 14px;
+            font-family: PingFangSC-Regular, PingFang SC;
+            font-weight: 400;
+            color: rgba(0, 0, 0, 0.65);
+            line-height: 14px;
+          }
+
+          div:last-child {
+            margin-top: 11px;
+            height: 18px;
+            font-size: 18px;
+            font-family: HelveticaNeue;
+            color: rgba(0, 0, 0, 0.85);
+            line-height: 18px;
+          }
+        }
+
+        .divider_column {
+          width: 1px;
+          height: 40px;
+          background: #E8E8E8;
+        }
+      }
+    }
+
+    //  3. 考生人数 card
+    .index_page_card_item3 {
+      //background-color: pink;
+      padding-bottom: 26px;
+      box-sizing: border-box;
+
+      // 上面半部分数据
+      .index_page_card_item_total {
+        height: 108px;
+        margin: 0 10px; // 内部左边距 24px
+        padding-top: 24px;
+        box-sizing: border-box;
+        //background-color: lightgreen;
+
+        .examination_room_total {
+          height: 14px;
+          font-size: 14px;
+          font-family: PingFangSC-Regular, PingFang SC;
+          font-weight: 400;
+          color: rgba(0, 0, 0, 0.45);
+          line-height: 14px;
+
+          .icon {
+            display: inline-block; // 初次给 内部 icon添加 display: inline-block;属性,防止下垂
+          }
+
+          .tool_tip {
+            margin-left: 8px; // icon 左边距 8px
+            width: 14px;
+            height: 14px;
+            color: rgba(0, 0, 0, 0.65);
+          }
+        }
+
+        // 总数
+        .number {
+          margin-top: 12px;
+          height: 30px;
+          font-size: 30px;
+          font-family: HelveticaNeue;
+          color: rgba(0, 0, 0, 0.85);
+          line-height: 30px;
+
+          span {
+            height: 16px;
+            font-size: 16px;
+            font-family: PingFangSC-Regular, PingFang SC;
+            font-weight: 400;
+            line-height: 16px;
+          }
+        }
+      }
+
+      // mini 图表
+      .examinee_mini_chart {
+        //background-color: pink;
+        height: 54px; // 高度 - 底部的 22px
+        margin-top: 2px;
+      }
+    }
+
+    //  4. 考生通过率
+    .index_page_card_item4 {
+
+      // 上面半部分数据
+      .index_page_card_item_total {
+        height: 52px;
+        margin: 0 10px; // 内部左边距 10px
+        padding-top: 24px;
+        box-sizing: border-box;
+        //background-color: lightgreen;
+
+        .examination_room_total {
+          height: 14px;
+          font-size: 14px;
+          font-family: PingFangSC-Regular, PingFang SC;
+          font-weight: 400;
+          color: rgba(0, 0, 0, 0.45);
+          line-height: 14px;
+
+          .icon {
+            display: inline-block; // 初次给 内部 icon添加 display: inline-block;属性,防止下垂
+          }
+
+          .tool_tip {
+            margin-left: 8px; // icon 左边距 8px
+            width: 14px;
+            height: 14px;
+            color: rgba(0, 0, 0, 0.65);
+          }
+        }
+
+        // 总数
+        .number {
+          margin-top: 12px;
+          height: 30px;
+          font-size: 30px;
+          font-family: HelveticaNeue;
+          color: rgba(0, 0, 0, 0.85);
+          line-height: 30px;
+
+          span {
+            height: 16px;
+            font-size: 16px;
+            font-family: PingFangSC-Regular, PingFang SC;
+            font-weight: 400;
+            line-height: 16px;
+          }
+        }
+      }
+
+      //   比率
+      .ratio {
+        height: 126px;
+      }
+    }
+
+    //  5. 平均领证周期
+    .index_page_card_item5 {
+      //background-color: pink;
+      padding-bottom: 26px;
+      box-sizing: border-box;
+
+      // 上面半部分数据
+      .index_page_card_item_total {
+        height: 108px;
+        margin: 0 10px; // 内部左边距 10px
+        padding-top: 24px;
+        box-sizing: border-box;
+        //background-color: lightgreen;
+
+        .examination_room_total {
+          height: 14px;
+          font-size: 14px;
+          font-family: PingFangSC-Regular, PingFang SC;
+          font-weight: 400;
+          color: rgba(0, 0, 0, 0.45);
+          line-height: 14px;
+
+          .icon {
+            display: inline-block; // 初次给 内部 icon添加 display: inline-block;属性,防止下垂
+          }
+
+          .tool_tip {
+            margin-left: 8px; // icon 左边距 8px
+            width: 14px;
+            height: 14px;
+            color: rgba(0, 0, 0, 0.65);
+          }
+        }
+
+        // 总数
+        .number {
+          margin-top: 12px;
+          height: 30px;
+          font-size: 30px;
+          font-family: HelveticaNeue;
+          color: rgba(0, 0, 0, 0.85);
+          line-height: 30px;
+
+          span {
+            height: 16px;
+            font-size: 16px;
+            font-family: PingFangSC-Regular, PingFang SC;
+            font-weight: 400;
+            line-height: 16px;
+          }
+        }
+      }
+
+      // mini 图表
+      .examinee_mini_chart {
+        height: 54px; // 高度 - 底部的 22px
+        margin: 1px 10px; // 左右边距10px
+      }
+    }
+  }
+;
+}

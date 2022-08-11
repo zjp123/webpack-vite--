@@ -1,0 +1,111 @@
+.allocating-car-modal-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  justify-content: flex-end;
+
+  .allocating-car-modal-wrapper-body {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 520px;
+    height: 100%;
+    background: #F1F3F4;;
+    padding: 10px 20px;
+    overflow-y: scroll;
+    .my-modal {
+      position: absolute;
+      z-index: 200;
+      display: flex;
+      flex-direction: column;
+      background-color: white;
+      border: 1px solid gray;
+      border-radius: 3px;
+      width: 300px;
+      height: 150px;
+      left: 50%;
+      top: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      >p {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+      }
+      >.my-modal-footer {
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        padding: 0 10px 10px 0;
+      }
+    }
+  }
+  .allocating-car-modal-wrapper-body-header {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    font-weight: bold;
+    position: relative;
+    line-height: 42px;
+    text-indent: 20px;
+    border-radius: 3px;
+    .close {
+      padding: 0 20px;
+      cursor: pointer;
+    }
+    .blue-border {
+      position: absolute;
+      left: 0;
+      top: 15px;
+      width: 2px;
+      height: 12px;
+      background: #006EFF;
+    }
+  }
+  .allocating-car-modal-wrapper-body-content {
+    margin-top: 10px;
+    background-color: white;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 3px;
+    .allocating-car-modal-wrapper-body-content-title {
+      border-bottom: 1px solid #E5E5E5;
+      padding-bottom: 5px;
+    }
+    .allocating-car-modal-wrapper-body-content-body {
+      margin-top: 6px;
+      .my-tag {
+        .start {
+          padding-right: 2px;
+        }
+        .end {
+          padding-left: 2px;
+        }
+      }
+      .ant-select {
+        width: 100%;
+      }
+    }
+    .ant-form-item{
+      margin-bottom: 0px;
+    }
+  }
+  .allocating-car-modal-wrapper-body-footer {
+    margin-top: 20px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 3px;
+    button {
+      margin-right: 10px;
+    }
+    button:last-child {
+      margin-right: 0px;
+    }
+  }
+}

@@ -1,0 +1,200 @@
+.point-content {
+  position: fixed;
+  width: 317px;
+  background-color: rgba(0, 54, 110, 0.4);
+  border: 1px solid #85c7ff;
+  border-radius: 8px;
+  padding: 20px 14px;
+  color: rgba(255, 255, 255, 1);
+  transform: translateX(-50%) translateY(-115%);
+  > div {
+    font-size: 20px;
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
+  p {
+    font-size: 18px;
+    margin: 0;
+    cursor: default;
+  }
+  .sanjian {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateY(100%) translateX(-50%);
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 10px 0 10px;
+    border-color: rgba(0, 54, 110, 0.4) transparent transparent transparent;
+  }
+}
+#information-analysis {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  font-size: 16px;
+  color: #fff;
+  box-sizing: border-box;
+  font-family: GemunuLibre-Bold;
+  // top: 0;
+  // z-index: 9999;
+  // width: 100%;
+  // height: 100%;
+  // overflow-x: hidden;
+  // overflow-y: scroll;
+  // font-family: GemunuLibre-Bold;
+  .level-wrap {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .information_portal_title {
+      // height: 100px;
+      // display: flex;
+      // justify-content: space-between;
+      // box-sizing: border-box;
+      // align-items: center;
+      // padding: 0 30px;
+      // position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 100px;
+      padding: 0 30px;
+      .information_portal_title_left {
+        font-size: 18px;
+        color: #badfff;
+      }
+      .information_portal_title_middle {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 42px;
+        font-weight: bold;
+        color: #ffffff;
+        font-family: HYYaKuHei-85J;
+      }
+      .information_portal_title_right {
+        font-size: 18px;
+        color: #badfff;
+        .information_portal_title_right_time {
+          margin-right: 8px;
+        }
+      }
+    }
+    .information_portal_line {
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      /* line-height: 20px; */
+      /* height: 20px; */
+      // margin: 10px 0;
+      img {
+        width: 100%;
+      }
+    }
+
+    .content {
+      // flex: 1;
+      display: flex;
+      justify-content: space-between;
+      // padding: 0 60px;
+      padding: 30px;
+      > div {
+        display: flex;
+        flex-direction: column;
+        .title {
+          font-size: 22px;
+          color: #badfff;
+        }
+        .data {
+          font-size: 50px;
+          height: 50px;
+          box-sizing: border-box;
+          color: #ffffff;
+        }
+      }
+    }
+
+    .charts {
+      width: 100%;
+      // height: 820px;
+      display: flex;
+      flex: 1;
+      padding: 0 30px;
+      justify-content: space-between;
+      height: 0;
+      .map {
+        width: 67%;
+        position: relative;
+        border: 1px solid rgba(47, 146, 214, 0.6);
+        .border {
+          position: absolute;
+          width: 10px;
+          height: 10px;
+        }
+        .border-left-top {
+          top: 0;
+          left: 0;
+          border-top: 4px solid rgba(47, 146, 214, 1);
+          border-left: 4px solid rgba(47, 146, 214, 1);
+          transform: translateY(-20%) translateX(-20%);
+        }
+        .border-right-top {
+          top: 0;
+          right: 0;
+          border-top: 4px solid rgba(47, 146, 214, 1);
+          border-right: 4px solid rgba(47, 146, 214, 1);
+          position: absolute;
+          transform: translateY(-20%) translateX(20%);
+        }
+        .border-left-bottom {
+          bottom: 0;
+          left: 0;
+          border-bottom: 4px solid rgba(47, 146, 214, 1);
+          border-left: 4px solid rgba(47, 146, 214, 1);
+          position: absolute;
+          transform: translateY(20%) translateX(-20%);
+        }
+        .border-right-bottom {
+          bottom: 0;
+          right: 0;
+          border-bottom: 4px solid rgba(47, 146, 214, 1);
+          border-right: 4px solid rgba(47, 146, 214, 1);
+          position: absolute;
+          transform: translateY(20%) translateX(20%);
+        }
+        .pointCss {
+          position: absolute;
+          width: 20px;
+          transform: translateX(-50%) translateY(-100%);
+          cursor: pointer;
+        }
+        #map {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .echarts {
+        width: 32%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        > div {
+          width: 100%;
+          height: 49.5%;
+        }
+      }
+    }
+  }
+}
+
+::-webkit-scrollbar {
+  width: inherit;
+  height: inherit;
+}

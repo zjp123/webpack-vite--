@@ -1,0 +1,273 @@
+#examination_room_information_analysis {
+  position: fixed !important;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 99999999;
+  box-sizing: border-box;
+  color: #fff;
+  font-size: 16px;
+  .flex-box {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    font-family: GemunuLibre-Bold;
+    // border: 1px solid red;
+
+    .examination_room_information_analysis_title {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 90px;
+      padding: 0 80px;
+
+      .examination_room_information_analysis_title_left {
+        color: #badfff;
+        font-size: 18px;
+      }
+
+      .examination_room_information_analysis_title_middle {
+        position: absolute;
+        left: 50%;
+        color: #ffffff;
+        font-weight: bold;
+        font-size: 42px;
+        font-family: HYYaKuHei-85J;
+        transform: translateX(-50%);
+      }
+
+      .examination_room_information_analysis_title_right {
+        color: #badfff;
+        font-size: 18px;
+        .examination_room_information_analysis_title_right_time {
+          margin-right: 8px;
+        }
+      }
+    }
+
+    .examination_room_information_analysis_line {
+      display: flex;
+      justify-content: center;
+      margin: 20px 0;
+      padding: 0;
+      img {
+        width: 100%;
+      }
+    }
+
+    .swiper_box {
+      padding: 0 30px;
+
+      .swiper {
+        > .swiper-wrapper {
+          > .swiper-slide {
+            display: flex;
+            //padding: 0 40px;
+
+            > div {
+              width: 100%;
+
+              > [id] {
+                width: 100%;
+                height: 100%;
+              }
+            }
+
+            > .examSiteType {
+              width: 30px;
+              height: 100px;
+              padding: 2px;
+              color: white;
+              font-size: 15px;
+              text-align: center;
+              background-color: rgba(178, 217, 254, 0.18);
+              border: 1px solid transparent;
+              border-radius: 4px;
+            }
+
+            > .content {
+              display: flex;
+              flex: 1;
+              justify-content: space-between;
+              padding-left: 20px;
+
+              > div {
+                display: flex;
+                flex-direction: column;
+
+                .title {
+                  color: #badfff;
+                  font-size: 22px;
+                }
+
+                .data {
+                  color: #ffffff;
+                  font-size: 50px;
+                }
+              }
+            }
+          }
+        }
+      }
+      .desc-box {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        // padding: 10px 30px;
+        .examSiteType {
+          width: 30px;
+          height: 100px;
+          padding: 2px;
+          color: white;
+          font-size: 15px;
+          text-align: center;
+          background-color: rgba(178, 217, 254, 0.18);
+          border: 1px solid transparent;
+          border-radius: 4px;
+        }
+
+        .content {
+          display: flex;
+          flex: 1;
+          justify-content: space-between;
+          padding-left: 20px;
+
+          > div {
+            display: flex;
+            flex-direction: column;
+
+            .title {
+              color: #badfff;
+              font-size: 22px;
+            }
+
+            .data {
+              color: #ffffff;
+              font-size: 50px;
+            }
+          }
+        }
+      }
+    }
+    // .second {
+    //   // height: 377px;
+    //   // margin: 40px 0;
+    // }
+
+    .third {
+      // width: 100%;
+      // height: 380px;
+      // padding: 0 30px;
+      // margin-bottom: 20px;
+
+      .examSiteAdvancedChart-class {
+        height: 100%;
+
+        #examSiteAdvancedChart {
+          height: 100%;
+        }
+      }
+    }
+  }
+}
+
+::-webkit-scrollbar {
+  width: inherit;
+  height: inherit;
+}
+
+// 重构代码
+#examination_room_information_analysis {
+  .flex-box {
+    // .reset-space {
+    // display: flex;
+    // flex-direction: column;
+    // flex: 1;
+    // box-sizing: border-box;
+    .row2 {
+      display: flex;
+      flex: 1;
+      // flex-direction: column;
+      box-sizing: border-box;
+      margin: 10px;
+      padding: 0;
+      overflow: hidden;
+      // .swiper_wrap {
+      //   display: flex;
+      //   flex: 1;
+      //   width: 100%;
+      //   height: 100%;
+
+      // }
+      .bottom-container {
+        display: flex;
+        flex: 1;
+        box-sizing: border-box;
+        width: 100%;
+        height: 100%;
+
+        .chart-border {
+          display: flex;
+          flex: 1;
+          flex-direction: column;
+          box-sizing: border-box;
+          .flex-reset {
+            display: flex;
+            flex: 1;
+            box-sizing: border-box;
+            width: 100%;
+            height: 100%;
+
+            .kcyc-chart,
+            .kctgl-chart,
+            .kttgl-chart {
+              width: 100%;
+              height: 100%;
+            }
+          }
+        }
+        .kctgl-border {
+          margin: 0 10px;
+        }
+        .kcartgl-border {
+          margin-right: 10px;
+        }
+      }
+    }
+    .third {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      box-sizing: border-box;
+      margin: 0 10px;
+      padding: 0;
+      // border: 1px solid green;
+      .examSiteAdvancedChart-class {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        box-sizing: border-box;
+        width: 100%;
+        height: 100%;
+        .flex-reset {
+          display: flex;
+          flex: 1;
+          box-sizing: border-box;
+          width: 100%;
+          height: 100%;
+          #examSiteAdvancedChart {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+.ant-message {
+  z-index: 100000000;
+}

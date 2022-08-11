@@ -1,0 +1,156 @@
+//  近30天考试人数
+.index_page_last_30_examinees {
+  height: 409px;
+  margin-top: 8px; // 上边距8px
+  background: #FFFFFF;
+  border-radius: 2px;
+
+  padding-top: 20px;
+  box-sizing: border-box;
+
+  .line_chart_container {
+
+    // 头部描述
+    .title {
+      .title_desc {
+        margin-left: 10px; // 距离左边距10px
+        height: 16px;
+        font-size: 16px;
+        font-family: PingFangSC-Medium, PingFang SC;
+        font-weight: 500;
+        color: #333333;
+        line-height: 16px;
+        //background-color: pink;
+
+        .icon {
+          display: inline-block; // 初次给 内部 icon添加 display: inline-block;属性,防止下垂
+        }
+
+        .tool_tip {
+          margin-left: 8px; // icon图标距离左侧距离8px
+          line-height: 14px;
+          font-size: 14px;
+          color: rgba(0, 0, 0, 0.65);
+        }
+      }
+
+      //
+      //
+      //.title_desc {
+      //  position: absolute;
+      //  z-index: 99;
+      //  box-sizing: border-box;
+      //  font-size: 16px;
+      //  font-family: PingFangSC-Medium, PingFang SC;
+      //  font-weight: 500;
+      //  color: #333333;
+      //
+      //  .icon {
+      //    width: 14px;
+      //    height: 14px;
+      //    margin-left: 30px;
+      //  }
+      //}
+      //
+      //.title_legend {
+      //  width: 100%;
+      //  text-align: center;
+      //
+      //  div {
+      //    display: inline-block;
+      //
+      //    .signed_number span, .examinee_number span, .certificate_number span {
+      //      display: inline-block;
+      //      width: 16px;
+      //      height: 8px;
+      //      margin: 0 5px;
+      //    }
+      //
+      //    .signed_number span {
+      //      background: #5B8FF8;
+      //    }
+      //
+      //    .examinee_number span {
+      //      background: #5D7092;
+      //    }
+      //
+      //    .certificate_number span {
+      //      background: #65DAAB;
+      //    }
+      //
+      //    .signed_number label, .examinee_number label, .certificate_number label {
+      //      font-size: 12px;
+      //      font-family: PingFangSC-Regular, PingFang SC;
+      //      font-weight: 400;
+      //      color: rgba(44, 53, 66, 0.65);
+      //      line-height: 12px;
+      //    }
+      //
+      //    .examinee_number {
+      //      margin: 0 20px;
+      //    }
+      //  }
+      //}
+    }
+
+    // 横向分割线
+    .divider_horizontal {
+      margin-top: 15px;
+      width: 100%;
+      height: 1px;
+      background: #E8E8E8;
+    }
+
+    // 条形图
+    .count_chart_container {
+      height: 333px; // 减去底部 24px
+      //background-color: pink;
+    }
+  }
+
+
+  //.title {
+  //
+  //  .title_legend {
+  //    width: 100%;
+  //    text-align: center;
+  //
+  //    div {
+  //      display: inline-block;
+  //
+  //      .signed_number span, .examinee_number span, .certificate_number span {
+  //        display: inline-block;
+  //        width: 16px;
+  //        height: 8px;
+  //        margin: 0 5px;
+  //      }
+  //
+  //      .signed_number span {
+  //        background: #5B8FF8;
+  //      }
+  //
+  //      .examinee_number span {
+  //        background: #5D7092;
+  //      }
+  //
+  //      .signed_number label, .examinee_number label, .certificate_number label {
+  //        font-size: 12px;
+  //        font-family: PingFangSC-Regular, PingFang SC;
+  //        font-weight: 400;
+  //        color: rgba(44, 53, 66, 0.65);
+  //        line-height: 12px;
+  //      }
+  //
+  //      .examinee_number {
+  //        margin: 0 20px;
+  //      }
+  //    }
+  //  }
+  //}
+  //
+  //.count_chart {
+  //  width: 100%;
+  //  height: 350px;
+  //  margin: 25px auto;
+  //}
+}

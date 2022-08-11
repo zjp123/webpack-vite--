@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="14px" viewBox="0 0 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>KTKC</title>
+    <g id="自动分配考台" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon" transform="translate(-16.000000, -173.000000)">
+            <g id="KTKC" transform="translate(16.000000, 173.000000)">
+                <circle id="椭圆形" stroke="#FFFFFF" cx="7" cy="7" r="6.5"></circle>
+                <path d="M4.392,11 L5.196,8.792 L8.88,8.792 L9.684,11 L11.088,11 L7.788,2.432 L6.3,2.432 L3,11 L4.392,11 Z M8.484,7.712 L5.592,7.712 L7.02,3.836 L7.068,3.836 L8.484,7.712 Z" id="A" fill="#FFFFFF" fill-rule="nonzero"></path>
+            </g>
+        </g>
+    </g>
+</svg>

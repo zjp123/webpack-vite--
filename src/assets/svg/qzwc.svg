@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="343px" height="313px" viewBox="0 0 343 313" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>编组 2</title>
+    <g id="考生签名" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="签字成功备份" transform="translate(-780.000000, -379.000000)">
+            <g id="编组-2" transform="translate(780.000000, 379.000000)">
+                <rect id="矩形" x="0" y="0" width="343" height="313"></rect>
+                <g id="编组" transform="translate(46.000000, 38.000000)">
+                    <text id="成绩单已提交，谢谢再见。" font-family="PingFangSC-Regular, PingFang SC" font-size="21" font-weight="normal" line-spacing="21" fill="#000000" fill-opacity="0.45">
+                        <tspan x="0" y="227">成绩单已提交，谢谢再见。</tspan>
+                    </text>
+                    <g id="Icon/Fill/Check-Circle-Fill" transform="translate(74.000000, 0.000000)" fill="#52C41A">
+                        <path d="M52.5,0 C23.5078125,0 0,23.5078125 0,52.5 C0,81.4921875 23.5078125,105 52.5,105 C81.4921875,105 105,81.4921875 105,52.5 C105,23.5078125 81.4921875,0 52.5,0 Z M75.1757812,35.3554688 L50.4960938,69.5742188 C49.0078125,71.6484375 45.9257812,71.6484375 44.4375,69.5742188 L29.8242188,49.3242188 C29.3789062,48.703125 29.8242188,47.8359375 30.5859375,47.8359375 L36.0820312,47.8359375 C37.2773438,47.8359375 38.4140625,48.4101562 39.1171875,49.3945312 L47.4609375,60.9726562 L65.8828125,35.4257812 C66.5859375,34.453125 67.7109375,33.8671875 68.9179688,33.8671875 L74.4140625,33.8671875 C75.1757812,33.8671875 75.6210938,34.734375 75.1757812,35.3554688 Z" id="形状"></path>
+                    </g>
+                    <text id="标题" font-family="PingFangSC-Medium, PingFang SC" font-size="36" font-weight="400" line-spacing="36" fill="#000000" fill-opacity="0.85">
+                        <tspan x="36" y="181">签字已完成</tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

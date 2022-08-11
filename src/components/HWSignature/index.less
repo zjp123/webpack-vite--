@@ -1,0 +1,83 @@
+// 汉王签字版新版本
+.hw_optimized_signature_container {
+  display: flex;
+  flex-direction: column;
+  //width: 460px;
+  //height: 280px;
+  background: #f9f9f9;
+  border: 1px solid #006eff;
+  border-radius: 2px;
+  // 最上面 文字提示
+  .signature_top_tooltip {
+    height: 30px;
+    line-height: 20px;
+    text-align: right;
+
+    // icon 和 文字提示共同样式
+    .tooltip_icon,
+    .tooltip_text {
+      display: inline-block;
+      font-weight: 400;
+      font-family: PingFangSC-Regular, PingFang SC;
+      line-height: 30px;
+    }
+    .tooltip_icon {
+      width: 12px;
+      height: 12px;
+      margin-right: 5px;
+      background-color: #69cb00;
+      border-radius: 50%;
+    }
+    .tooltip_text {
+      margin-right: 15px;
+      color: #69cb00;
+      font-size: 14px;
+    }
+  }
+  // 签字回显容器
+  .signature_middle_img_container {
+    flex-grow: 1;
+    //background-color: lightcyan;
+    .img_result_container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+      img {
+        height: 100%;
+      }
+    }
+  }
+  // 底部子孙内容
+  .signature_bottom_container {
+    .signature_bottom_submit {
+      height: 50px;
+      line-height: 50px;
+      text-align: right;
+      div {
+        // 底部的 所有 div 样式默认改为 inline-block 格式
+        display: inline-block;
+      }
+      // 重签按钮
+      .resign_btn, .sign_btn {
+        width: 80px;
+        height: 32px;
+        margin-right: 16px;
+        color: #006eff;
+        font-weight: 400;
+        font-size: 14px;
+        font-family: PingFangSC-Regular, PingFang SC;
+        line-height: 32px;
+        text-align: center;
+        background: #f5f9ff;
+        border: 1px solid #006eff;
+        border-radius: 2px;
+        cursor: pointer;
+      }
+      .sign_btn {
+        background: #006eff;
+        color: #fff;
+      }
+    }
+  }
+}

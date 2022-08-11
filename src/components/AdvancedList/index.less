@@ -1,0 +1,179 @@
+.advanced-list-loading {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.advance-form {
+  border-bottom: 8px solid rgb(240, 242, 245);
+
+  .ant-checkbox-group {
+    flex-direction: row;
+
+    @media only screen and (max-width: 1500px) {
+      .ant-checkbox-wrapper.ant-checkbox-group-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    .ant-checkbox-wrapper.ant-checkbox-group-item {
+      padding: 0;
+    }
+  }
+
+  .ant-btn-dashed {
+    border-style: dashed;
+  }
+
+  .advance-form-father {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 20px 0;
+
+    .advance-form-father-top {
+      display: flex;
+      width: 100%;
+
+      .advance-form-father-form {
+        flex: 1;
+      }
+
+      .advance-form-father-button {
+        width: 200px;
+        display: flex;
+        justify-content: center;
+
+        > button {
+          margin: 0 8px;
+          border: none;
+        }
+        .edit-or-save {
+          background-color: green;
+        }
+        .delete {
+          background-color: orange;
+          color: white;
+        }
+      }
+    }
+  }
+
+  .advance-form-children {
+    display: flex;
+    flex-direction: column;
+
+    .advance-form-child {
+      width: 100%;
+      display: flex;
+      padding: 20px 20px 0;
+      background-color: #F9FBFF;
+      border-top: 1px solid #E9F1F9;
+
+      .advance-form-child-left {
+        flex: 1;
+      }
+
+      .advance-form-child-right {
+        cursor: pointer;
+        width: 40px;
+      }
+    }
+  }
+}
+
+.advance-saved {
+  border-bottom: 8px solid rgb(240, 242, 245);
+  position: relative;;
+  .advance-saved-title {
+    width: 100%;
+    background-color: #6B798E;
+    padding: 10px 20px;
+    color: white;
+    font-weight: bold;
+    border-radius: 6px 6px 0 0
+  }
+  .advance-saved-father {
+    width: 100%;
+    display: flex;
+    padding: 20px;
+
+    .advance-saved-father-content {
+      flex: 1;
+      display: flex;
+
+      .advance-saved-father-content-item {
+        font-weight: bold;
+        padding-right: 10px;
+        display: flex;
+        align-items: center;
+        > p {
+          display: inline-block;
+          border-right: 2px solid #E8EFF3;
+          padding-right: 10px;
+          margin-bottom: 0;
+          line-height: 14px;
+          font-size: 14px;
+        }
+      }
+      .advance-saved-father-content-item:last-child {
+        > p {
+          border-right: none;
+          padding-right: 0;
+        }
+      }
+    }
+
+    .advance-saved-father-button {
+      width: 200px;
+      display: flex;
+      justify-content: center;
+
+      > button {
+        margin: 0 8px;
+        border: none;
+      }
+      .edit-or-save {
+        background-color: green;
+      }
+      .delete {
+        background-color: orange;
+        color: white;
+      }
+    }
+  }
+
+  .advance-saved-children {
+    display: flex;
+    flex-direction: column;
+
+    .advance-saved-child {
+      width: 100%;
+      display: flex;
+      padding: 20px;
+      background-color: #F9FBFF;
+      border-top: 1px solid #E9F1F9;
+
+      .advance-saved-child-content {
+        flex: 1;
+      }
+
+      .advance-saved-child-button {
+        cursor: pointer;
+        width: 40px;
+      }
+
+    }
+
+    .outlined-icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 60px;
+      cursor: pointer;
+    }
+  }
+}

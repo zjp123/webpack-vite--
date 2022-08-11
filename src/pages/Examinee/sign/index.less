@@ -1,0 +1,445 @@
+// 页面最外部容器
+.ant-picker {
+  width: 100%;
+}
+.examinee_signature_container {
+  height: 100%;
+
+  // 强制修改 ant-card 的高度, 不建议.
+  .ant-card-body {
+    .ant-row {
+      margin-bottom: 0px !important;
+    }
+  }
+
+  // 每一天的考试看板容器
+  .each_date_container {
+    background-color: #F9F9F9;
+
+    .each_outer_card_container {
+      background-color: #FFFFFF;
+      margin: 5px 0;
+      display: flex;
+      /** 2. ========== 方案二: 最佳实现方案  === */
+
+      .title_container {
+        height: 50px;
+        border-radius: 2px;
+        line-height: 50px;
+        margin-left: 10px; // 距离左边距都是 10px
+
+        span {
+          font-size: 20px;
+          font-family: PingFangSC-Medium, PingFang SC;
+          font-weight: 500;
+          color: #333333;
+        }
+      }
+
+      .every_card_container {
+        background-color: #F9F9F9;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-right: -5px;
+
+        //  ========== 单个看板的整体flex样式开始  ================
+        .every_card {
+          width: 392px;
+          height: 270px;
+          background-color: #FFFFFF;
+          margin: 0 5px 5px 5px;
+          /** 注意: 一定不要删除 */
+          flex-grow: 1;
+
+          .sub_title {
+            margin: 14px 0 14px 10px; // 距离左边距都是 10px
+            span {
+              height: 16px;
+              font-size: 15px;
+              font-family: PingFangSC-Medium, PingFang SC;
+              font-weight: 600;
+              color: #333333;
+            }
+          }
+
+          // 中间分割线
+          .divider_horizontal {
+            height: 1px;
+            background: #F1F1F1;
+          }
+
+          .sub_content {
+            // card 高281 - sub_title 高 16px - sub_title 上下margin 24px - 1px 分割线 216px
+            height: 216px;
+
+            .top_number {
+              margin: 24px auto; // margin-top 24px margin-bottom 24px
+              display: flex;
+              justify-content: space-between;
+              align-items: center; // 每个数字描述部分 垂直居中
+
+              .number_item {
+                padding: 0 10px; // 数字距离左边框距离
+                box-sizing: border-box;
+
+                .number {
+                  height: 24px;
+                  font-size: 24px;
+                  font-family: HelveticaNeue;
+                  color: #000000;
+                  line-height: 24px;
+
+                  .number_text {
+                    font-size: 14px;
+                  }
+                }
+              }
+            }
+            //分割线 1px
+            .divider_horizontal {
+              margin: 0 auto;
+              width: 95%;
+              height: 1px;
+              background: #F1F1F1;
+            }
+            .bottom_table {
+              display: flex;
+              align-items: flex-start; // 交叉轴 start
+
+              .div_table {
+                width: 100%;
+                height: 90px;
+                margin: 10px 10px;
+                border: 1px solid rgba(0, 0, 0, 0.15);
+                border-radius: 2px;
+                display: flex;
+                flex-direction: column;
+
+                .table_top, .table_bottom {
+                  display: flex;
+                  height: 45px;
+                  justify-content: space-between; // 主轴居中
+                  // 文字样式
+                  font-size: 14px;
+                  font-family: PingFangSC-Regular, PingFang SC;
+                  font-weight: 400;
+                  color: #333333;
+                  line-height: 45px;
+
+                  div.first, div.last {
+                    flex-basis: 50%;
+                    display: flex;
+
+                    div.first_label {
+                      width: 82px;
+                      text-align: center;
+                      background-color: #FAFAFA;
+                    }
+                  }
+
+                  .middle_divider_vertical {
+                    height: 44px; // 45 减去表格上下 1px
+                    border-right: 1px solid rgba(0, 0, 0, 0.15);
+                  }
+                }
+
+                .table_top {
+                  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+                }
+              }
+            }
+          }
+        }
+
+        i {
+          width: 392px;
+          margin-right: 10px;
+          /** 注意: 一定不要删除 */
+          flex-grow: 1;
+        }
+      }
+    }
+  }
+
+}
+
+/** ----------------- 考生签名统计页面样式 ------------------ */
+.desc_card {
+  .desc_card_title, .desc_sub {
+    font-size: 18px;
+    font-family: PingFangSC-Medium, PingFang SC;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.85);
+    line-height: 18px;
+  }
+
+  .desc_sub {
+    margin-top: 50px;
+    font-size: 14px;
+  }
+
+  .desc_card_content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; // 交叉轴居中
+
+    .desc_card_content_left {
+      width: 100%;
+      height: 142px; // 根据父元素最终高度计算出来的高
+      display: flex;
+      flex-direction: column;
+
+      //  上半部分
+      .content_top {
+        flex-basis: 50%;
+        display: flex;
+        align-items: center;
+
+        .first, .second {
+          flex-basis: 50%;
+
+          .number {
+            font-size: 32px;
+            font-family: HelveticaNeue;
+            color: #000000;
+            line-height: 32px;
+
+            span {
+              font-size: 14px;
+            }
+          }
+        }
+
+        .third, .fourth {
+          flex-basis: 50%;
+
+          .number {
+            font-size: 32px;
+            font-family: HelveticaNeue;
+            color: #000000;
+            line-height: 32px;
+
+            span {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+
+      // 下半部分
+      .content_bottom {
+        flex-basis: 50%;
+
+        .description {
+          display: flex;
+          justify-content: space-between;
+          height: 100%;
+          align-items: center;
+
+          .first, .second {
+            flex-basis: 18%;
+          }
+
+          .third, .fourth {
+            flex-basis: 32%;
+          }
+        }
+      }
+    }
+
+    // 右半部分
+    .desc_card_content_right {
+      display: flex;
+
+      .examiner_pic {
+        margin-right: 15px;
+      }
+
+      .examiner_sign {
+      }
+
+      .examiner_pic, .examiner_sign {
+        text-align: center;
+
+        span {
+          font-size: 14px;
+          font-weight: 500;
+          color: rgba(0, 0, 0, 0.85);
+        }
+
+        // 照片 和 签字框大小
+        div.real_container {
+          width: 120px;
+          height: 120px;
+          //border: 1px dashed #000000;
+          border-radius: 2px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          div {
+            max-height: 118px; // 以防里面的图片高度过高,做个最高限制
+          }
+        }
+      }
+    }
+  }
+}
+
+/** =============== 考生签名页样式 ==================== */
+.pdf_container {
+  text-align: center;
+
+  .pdf_btn_sign {
+    display: inline-block;
+    width: 200px;
+    height: 60px;
+    background: #327ef8;
+    border-radius: 4px;
+    cursor: pointer;
+
+    & > span {
+      width: 72px;
+      height: 18px;
+      font-size: 18px;
+      font-family: PingFangSC-Regular, PingFang SC;
+      font-weight: 400;
+      color: #ffffff;
+      line-height: 60px;
+
+    }
+  }
+
+
+  .pdf_btn_has_unsign {
+    display: inline-block;
+    height: 40px;
+    border-radius: 4px;
+
+    .btn_content {
+      display: flex;
+      justify-content: space-between;
+
+      .to_signing_btn, .to_close_btn {
+        font-size: 16px;
+        font-family: PingFangSC-Regular, PingFang SC;
+        font-weight: 400;
+        color: #ffffff;
+        line-height: 40px;
+        padding: 2px;
+        box-sizing: border-box;
+        cursor: pointer;
+      }
+
+      .to_signing_btn {
+        width: 300px;
+        background-color: #FF8D49;
+      }
+
+      .to_close_btn {
+        margin-left: 10px;
+        width: 120px;
+        background: #FF8D49;;
+      }
+    }
+  }
+}
+
+.resign_container {
+  position: relative;
+
+  .resign_content {
+    width: 1024px;
+    height: 720px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -512px;
+    margin-top: -360px;
+
+    .card_monitor {
+      width: 500px;
+      height: 300px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin-left: -250px;
+      margin-top: -150px;
+      text-align: center;
+
+      div:nth-of-type(1) {
+        margin-top: 30px;
+        margin-bottom: 15px;
+      }
+
+      span.manual_write {
+        color: #1890ff;
+        text-decoration: underline;
+        font-size: 18px;
+      }
+
+      span.manual_write:hover {
+        cursor: pointer;
+      }
+
+      span.manual_write:active {
+        color: red;
+      }
+    }
+  }
+}
+
+// 成绩单签字
+.examiner_signing_container {
+  height: 100%;
+  padding-top: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .examiner_signing_content {
+    .examiner_pic {
+      width: 200px;
+      height: 200px;
+      margin: 0px auto;
+    }
+
+    .examiner_sign {
+      width: 250px;
+      height: 150px;
+      margin: 10px auto;
+    }
+
+    .examiner_desc {
+      margin: 0 auto;
+      text-align: center;
+      color: #2f54eb;
+
+      .examiner_sign_btn {
+        width: 200px;
+        height: 35px;
+        font-size: 25px;
+        background: green;
+        color: #ffffff;
+        line-height: 35px;
+        margin: 0 auto;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.modal-box {
+  max-height: 660px;
+  overflow-y: scroll;
+  img{
+    margin: 0 !important;
+  }
+}
+
+.ant-modal-body {
+  padding-bottom: 0;
+}

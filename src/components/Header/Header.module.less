@@ -1,0 +1,33 @@
+.header {
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  height: 40px;
+  padding: 0;
+  //width: 100%; // 注掉 100%
+  background: @component-background;
+  box-shadow: 0 0.3px 0.9px rgba(0, 0, 0, 0.12),
+    0 1.6px 3.6px rgba(0, 0, 0, 0.12);
+}
+
+// .content {
+//   height: 64px;
+//   display: flex;
+//   align-items: center;
+//   cursor: pointer;
+//   padding: 0 30px;
+//   transition: all .3s;
+//   &:hover {
+//     background: rgba(0, 0, 0, .025);
+//   }
+// }
+
+.toggleMenu {
+  display: inline-block;
+  height: 64px;
+  padding: 0 24px;
+  font-size: 20px;
+  line-height: 64px;
+  cursor: pointer;
+  transition: all 0.3s, padding 0s;
+}

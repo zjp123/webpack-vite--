@@ -1,0 +1,133 @@
+//  各科考试人数和驾校排行榜
+.index_page_subject_school_rank {
+  margin-top: 8px; // 顶部外边距8px
+  height: 221px;
+  background: #F9F9F9;
+  display: flex;
+
+  .index_page_subject_examinees {
+    margin-right: 8px;
+    background-color: #FFFFFF;
+    display: inline-block;
+    flex-basis: 40%;
+
+    .title {
+      height: 55px;
+      line-height: 55px;
+      margin-left: 10px;
+
+      span {
+        font-size: 16px;
+        font-family: PingFangSC-Medium, PingFang SC;
+        font-weight: 500;
+        color: rgba(0, 0, 0, 0.85);
+      }
+
+      .icon {
+        display: inline-block; // 初次给 内部 icon添加 display: inline-block;属性,防止下垂
+      }
+
+      .tool_tip {
+        margin-left: 8px; // icon图标距离左侧距离8px
+        line-height: 14px;
+        width: 14px;
+        height: 14px;
+        color: rgba(0, 0, 0, 0.65);
+      }
+    }
+
+    .divider_row {
+      border-bottom: 1px solid #F9F9F9;
+    }
+
+    .subject_pie {
+      height: 166px;
+      width: 80%;
+    }
+  }
+
+  .index_page_school_rank {
+    background-color: #FFFFFF;
+    display: inline-block;
+    flex-basis: 60%;
+    padding: 2px;
+    box-sizing: border-box;
+    background-clip: content-box;
+
+    .title {
+      height: 55px;
+      line-height: 55px;
+      margin-left: 24px;
+
+      span {
+        font-size: 16px;
+        font-family: PingFangSC-Medium, PingFang SC;
+        font-weight: 500;
+        color: rgba(0, 0, 0, 0.85);
+      }
+
+      .icon {
+        display: inline-block; // 初次给 内部 icon添加 display: inline-block;属性,防止下垂
+      }
+
+      .tool_tip {
+        margin-left: 8px; // icon图标距离左侧距离8px
+        line-height: 14px;
+        width: 14px;
+        height: 14px;
+        color: rgba(0, 0, 0, 0.65);
+      }
+    }
+
+    .divider_row {
+      border-bottom: 1px solid #F9F9F9;
+    }
+
+    .school_ranking {
+      display: flex;
+      height: 160px;
+
+      .ranking_left, .ranking_right {
+        flex-basis: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+
+        .ranking_school {
+          display: flex;
+          justify-content: space-between;
+
+          .school_name, .ratio {
+            margin: 0 25px;
+            font-size: 14px;
+            font-family: PingFangSC-Regular, PingFang SC;
+            font-weight: 400;
+            color: rgba(0, 0, 0, 0.65);
+          }
+
+          .school_name span {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #314659;
+            font-size: 14px;
+            text-align: center;
+            line-height: 20px;
+            color: #FFFFFF;
+          }
+        }
+      }
+
+      .ranking_middle_divider {
+        border: 1px solid #F9F9F9;
+        height: 142px;
+        margin-top: 10px;
+      }
+
+      .ranking_right {
+        flex-basis: 50%;
+      }
+    }
+  }
+}

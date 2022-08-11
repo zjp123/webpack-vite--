@@ -1,0 +1,33 @@
+// 向上方向的三角形
+.top_direction {
+  display: inline-block;
+  width: 0px; /*设置宽高为0，所以div的内容为空，从才能形成三角形尖角*/
+  height: 0px;
+  border-right: 8px solid transparent;
+  border-bottom: 10px solid #ff0000;
+  border-left: 8px solid transparent; /*transparent 表示透明*/
+}
+.bottom_direction {
+  display: inline-block;
+  width: 0px; /*设置宽高为0，所以div的内容为空，从才能形成三角形尖角*/
+  height: 0px;
+  border-top: 10px solid #30ff00;
+  border-right: 8px solid transparent;
+  border-left: 8px solid transparent; /*transparent 表示透明*/
+}
+.left_direction {
+  display: inline-block;
+  width: 0px; /*设置宽高为0，所以div的内容为空，从才能形成三角形尖角*/
+  height: 0px;
+  border-top: 8px solid transparent;
+  border-right: 10px solid #30ff00;
+  border-bottom: 8px solid transparent; /*transparent 表示透明*/
+}
+.right_direction {
+  display: inline-block;
+  width: 0px; /*设置宽高为0，所以div的内容为空，从才能形成三角形尖角*/
+  height: 0px;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent; /*transparent 表示透明*/
+  border-left: 10px solid #30ff00;
+}

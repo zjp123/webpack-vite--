@@ -1,0 +1,52 @@
+.student_photo_container {
+  margin: 0 auto;
+  text-align: center;
+  .student_photo,
+  student_photo_camera {
+    display: inline-block;
+    justify-content: center;
+    margin: 0 auto;
+  }
+}
+
+// 考官详情 图片部分
+.examiner_photo_container {
+  display: flex;
+  justify-content: center;
+
+  // 图片回显
+  .photo_img {
+    position: relative;
+    display: inline-block;
+    .close_icon {
+      position: absolute;
+      top: 0;
+      right: -8px;
+      z-index: 999;
+    }
+    .button_container {
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+      margin-top: 10px;
+    }
+  }
+
+  //   相机容器
+  .camera_container {
+    .student_photo_camera {
+    }
+    .button_center{
+      width:100%;
+      display: flex;
+      justify-content: center;
+    }
+
+    .photo {
+      > button {
+        margin-top: 10px;
+        margin-left: 70px;
+      }
+    }
+  }
+}

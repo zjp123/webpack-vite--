@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="98px" height="22px" viewBox="0 0 98 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>科目三理论绩单</title>
+    <g id="控件" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="科目三理论绩单">
+            <path d="M4,0 L98,0 L98,0 L98,18 C98,20.209139 96.209139,22 94,22 L0,22 L0,22 L0,4 C-1.15871992e-15,1.790861 1.790861,4.05812251e-16 4,0 Z" id="矩形备份" fill="#000000" opacity="0.697406884"></path>
+            <text font-family="PingFangSC-Regular, PingFang SC" font-size="12" font-weight="normal" line-spacing="12" fill="#FFFFFF">
+                <tspan x="6" y="17">科目三理论绩单</tspan>
+            </text>
+        </g>
+    </g>
+</svg>

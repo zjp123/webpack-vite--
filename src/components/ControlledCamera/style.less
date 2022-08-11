@@ -1,0 +1,41 @@
+// 可控相机组件样式
+.controlled_camera_container {
+  position: relative;
+
+  .camera_outer {
+  }
+  //background-color: pink;
+  .camera_focus {
+    position: absolute;
+    top: 20px;
+    left: 60px;
+    z-index: 9999;
+  }
+
+  // renderIndex===2 底部按钮
+  .sub_button {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px auto;
+
+    .upload_pic,
+    .shoting_pic {
+      width: 120px;
+      height: 42px;
+      line-height: 42px;
+      text-align: center;
+      border-radius: 6px;
+      border: 1px solid #006eff;
+      cursor: pointer;
+    }
+
+    .upload_pic {
+      color: #006eff;
+      background: #e2edff;
+    }
+    .shoting_pic {
+      color: #ffffff;
+      background: #006eff;
+    }
+  }
+}

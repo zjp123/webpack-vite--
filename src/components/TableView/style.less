@@ -1,0 +1,165 @@
+.container {
+  min-width: 42px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .searchContainer {
+    padding: 12px 24px 0 24px;
+    background-color: #fff;
+    //min-height: 60px;
+    border-bottom: 5px solid #f0f2f5;
+
+    .ant-row {
+      margin-bottom: 1px !important;
+    }
+
+    .ant-picker-range {
+      width: 100%;
+    }
+
+    .ant-picker {
+      width: 100%;
+    }
+
+    .ant-form-item-control {
+      padding-bottom: 6px;
+    }
+
+    .ant-row {
+      height: 40px !important;
+    }
+  }
+
+  .tableContainer {
+    padding: 12px 24px 12px 24px;
+    background-color: #fff;
+    border-radius: 2px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    .table-operate-icon {
+      margin: 0 4px;
+      font-size: 16px;
+      cursor: pointer;
+
+      &:hover {
+        color: #1890ff;
+      }
+    }
+
+    .row {
+      padding: 15px 0;
+    }
+
+    .ant-btn:first-child {
+      padding-left: 0px;
+    }
+
+    .ant-form-item-control {
+      padding-bottom: 8px;
+    }
+
+    .react-resizable {
+      position: relative;
+      background-clip: padding-box;
+    }
+
+    .react-resizable-handle {
+      position: absolute;
+      right: -5px;
+      bottom: 0;
+      z-index: 1;
+      width: 10px;
+      height: 100%;
+      cursor: col-resize;
+    }
+
+    .ant-table-header {
+      .ant-table-cell {
+        height: 54px;
+        color: #000000; // 表格标题颜色
+      }
+    }
+
+    .ant-table-body {
+      // max-height: 520px !important;
+
+      .ant-table-row {
+        height: 64px;
+        color: #666666; // 表格cell颜色
+      }
+    }
+  }
+
+  .ant-table {
+    table {
+      border: 0 solid transparent;
+
+      tbody,
+      thead {
+        tr {
+
+          td,
+          th {
+            border: 0 solid transparent;
+          }
+        }
+      }
+    }
+  }
+
+  .dark-row {
+    background-color: #f9f9f9;
+
+    .ant-table-cell {
+      background-color: #f9f9f9;
+    }
+  }
+
+  .light-row {
+    background-color: #fff;
+
+    .ant-table-cell {
+      background-color: #fff;
+    }
+  }
+
+  .ant-pagination {
+    text-align: center;
+  }
+}
+
+// 弹窗里面的table宽度自适应
+.modal-content {
+  .ant-form-inline {
+    .ant-form-item {
+      margin-right: 0;
+    }
+  }
+
+  .container {
+    overflow-x: scroll;
+    min-width: auto;
+
+    .searchContainer {
+      padding: 0;
+    }
+  }
+}
+
+//身份证隐藏
+.readIDCard {
+  position: relative !important;
+  overflow: hidden;
+}
+
+.readIDCard-btn {
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+}

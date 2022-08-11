@@ -1,0 +1,574 @@
+// @import "~antd/es/style/themes/default.less";
+@import "antd/es/style/themes/default.less";
+@font-face {
+  font-family: "GemunuLibre-Bold";
+  src: url("./assets/font/GemunuLibre-Bold.otf");
+}
+@font-face {
+  font-family: "HYYaKuHei-85J";
+  src: url("./assets/font/HYYaKuHei-85J.ttf");
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  background-color: #f0f2f5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -ms-overflow-style: none;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+  /* Chrome Safari */
+}
+
+.layout-content-main {
+  height: calc(100vh - 114px); //2021/9/26 liuzhen21
+  padding: 5px 10px 2px;
+  //height: calc(100vh - 40px);
+  // display: flex;
+  // position: absolute;
+  overflow: auto !important;
+}
+
+.fl {
+  z-index: 8;
+  float: left;
+}
+
+.fr {
+  z-index: 8;
+  float: right;
+}
+
+.clearfix:after {
+  display: block;
+  clear: both;
+  height: 0;
+  font-size: 0;
+  visibility: hidden;
+  content: " ";
+}
+
+.global-spin {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+}
+
+/* 滚动条 */
+
+/*滚动条宽度*/
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+/* Handle样式 */
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+/*当前窗口未激活的情况下*/
+
+::-webkit-scrollbar-thumb:window-inactive {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+/*hover到滚动条上*/
+
+::-webkit-scrollbar-thumb:vertical:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+/*滚动条按下*/
+
+::-webkit-scrollbar-thumb:vertical:active {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.bf-modal {
+  z-index: 999 !important;
+}
+
+input::-webkit-inner-spin-button {
+  display: none !important;
+}
+
+.ant-menu-item.ant-menu-item-only-child .anticon {
+  margin-right: 10px !important;
+}
+
+.ant-layout-sider {
+  height: 100%;
+
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+}
+
+.ant-tabs-bar {
+  user-select: none;
+}
+
+.ant-switch-inner {
+  margin-right: 6px;
+  margin-left: 24px;
+}
+.ant-menu-item-selected {
+  background: #003673 !important;
+  a::before {
+    border-left: 3px solid #005dc6;
+  }
+}
+
+.webTheme {
+  width: 24px;
+  height: 24px;
+  margin: 20px;
+  background: @primary-color;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.avart {
+  display: inline-block;
+  width: 26px;
+  height: 26px;
+  margin-right: 8px;
+  color: #fff;
+  line-height: 22px;
+  text-align: center;
+  background-color: @primary-color;
+  border-radius: 50%;
+}
+
+.ant-layout-content,
+.ant-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: unset !important;
+}
+
+.logo {
+  position: relative;
+  padding: 0 24px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s;
+
+  > a {
+    display: flex;
+    align-items: center;
+    height: 64px;
+  }
+
+  img {
+    display: inline-block;
+    height: 32px;
+    vertical-align: middle;
+  }
+
+  h1 {
+    display: inline-block;
+    margin: 0 0 0 12px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 18px;
+    white-space: nowrap;
+    vertical-align: middle;
+    animation: fade-in;
+    animation-duration: 0.3s;
+  }
+}
+
+.App,
+#root {
+  width: 100%;
+  height: 100%;
+  // height: 100vh;
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.fl {
+  z-index: 8;
+  float: left;
+}
+
+.fr {
+  z-index: 8;
+  float: right;
+}
+
+.clearfix:after {
+  display: block;
+  clear: both;
+  height: 0;
+  font-size: 0;
+  visibility: hidden;
+  content: " ";
+}
+
+.global-spin {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+}
+
+/* 滚动条 */
+
+/*滚动条宽度*/
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+/* Handle样式 */
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+/*当前窗口未激活的情况下*/
+
+::-webkit-scrollbar-thumb:window-inactive {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+/*hover到滚动条上*/
+
+::-webkit-scrollbar-thumb:vertical:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+/*滚动条按下*/
+
+::-webkit-scrollbar-thumb:vertical:active {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.bf-modal {
+  z-index: 999 !important;
+}
+
+input::-webkit-inner-spin-button {
+  display: none !important;
+}
+
+.ant-menu-item.ant-menu-item-only-child .anticon {
+  margin-right: 10px !important;
+}
+
+.ant-layout-sider {
+  z-index: 999;
+  height: 100%;
+
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+//.flex-center-column {
+//    display: flex;
+//    flex-direction: column;
+//    align-items: center;
+//    justify-content: center;
+//}
+
+/* 自动填充样式修改 */
+// input:-webkit-autofill {
+//     box-shadow: 0 0 0px 1000px #1f1f1f inset !important;
+//     text-fill-color: white;
+//   -webkit-text-fill-color: white;
+//   border-radius: 0;
+// }
+
+.ant-tabs-bar {
+  user-select: none;
+}
+
+.ant-switch-inner {
+  margin-right: 6px;
+  margin-left: 24px;
+}
+
+.webTheme {
+  width: 24px;
+  height: 24px;
+  margin: 20px;
+  background: @primary-color;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.avart {
+  display: inline-block;
+  width: 26px;
+  height: 26px;
+  margin-right: 8px;
+  color: #fff;
+  line-height: 22px;
+  text-align: center;
+  background-color: @primary-color;
+  border-radius: 50%;
+}
+
+.ant-layout-content,
+.ant-layout {
+  min-height: unset !important;
+}
+
+.logo {
+  position: relative;
+  padding: 0 24px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s;
+
+  > a {
+    display: flex;
+    align-items: center;
+    height: 64px;
+  }
+
+  img {
+    display: inline-block;
+    height: 32px;
+    vertical-align: middle;
+  }
+
+  h1 {
+    display: inline-block;
+    margin: 0 0 0 12px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 18px;
+    white-space: nowrap;
+    vertical-align: middle;
+    animation: fade-in;
+    animation-duration: 0.3s;
+  }
+}
+
+.ant-table-bordered {
+  justify-content: space-between;
+  overflow-y: scroll;
+}
+.tiny-delimiter {
+  margin: 0 -10px;
+  color: #ccc;
+}
+.ant-table-thead > tr > th,
+.ant-table-tbody > tr > td,
+.ant-table-selectio,
+.ant-table-selection-column {
+  width: 100px !important;
+}
+
+.ant-steps-label-vertical .ant-steps-item-content {
+  width: 168px;
+  margin-left: -10px;
+}
+
+.ant-layout-sider ant-layout-sider-dark {
+  background: #ffffff;
+}
+
+.ant-descriptions-view {
+  // margin-bottom: 5%;
+  position: relative;
+  width: 98%;
+}
+
+.ant-layout-sider-children {
+  height: auto !important;
+}
+
+.ant-table-thead {
+  border: none;
+}
+.ant-table {
+  :global {
+    width: 98%;
+    margin-left: 1%;
+    .ant-table-thead > tr > th,
+    .ant-table-tbody > tr > td {
+      padding: 6px 8px !important;
+    }
+    .ant-table-thead > tr > th {
+      color: white;
+      background-color: #242542;
+    }
+    .ant-table-thead > tr > th:hover {
+      background-color: #535781;
+    }
+    .ant-table-thead
+      > tr
+      > th.ant-table-column-has-actions.ant-table-column-has-sorters:hover {
+      background: rgb(201, 223, 11);
+    }
+    .ant-table-content {
+      color: white;
+      background-color: #343655;
+    }
+    .ant-table-tbody > tr:hover > td {
+      background-color: rgba(106, 178, 245, 0.5) !important;
+    }
+  }
+}
+.ant-menu-sub {
+  background: #001e3f !important;
+}
+.ant-menu-item-selected {
+  background: #003673 !important;
+}
+.ant-layout-sider-trigger {
+  background: #003169 !important;
+}
+
+.ant-menu-item .anticon,
+.ant-menu-submenu-title .anticon {
+  margin-right: 0;
+}
+.sub-menu-change.noSelect {
+  padding-left: 19px !important;
+}
+
+.sub-menu-change .ant-menu-submenu-title {
+  padding-left: 19px !important;
+}
+.ant-btn {
+  color: #006eff;
+  font-weight: 400;
+  font-size: 14px;
+  background-color: #f5f9ff;
+  border: 1px solid #006eff;
+  border-radius: 2px;
+}
+
+.ant-btn-primary {
+  color: #fff;
+  background-color: #006eff;
+}
+
+.ant-btn-link {
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.ant-modal-confirm-body-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  .ant-modal-confirm-body {
+    margin-top: 18px;
+  }
+  .anticon {
+    display: flex;
+    align-items: center;
+  }
+  .ant-modal-confirm-btns {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+  }
+}
+
+.ant-modal-body {
+  overflow-x: scroll;
+}
+.ant-upload.ant-upload-select-picture-card {
+  width: 150px;
+  height: 150px;
+  background: #f3f3f3;
+  border: 1px solid rgba(0, 110, 255, 0.6);
+}
+.tu1 {
+  margin-left: -5px !important ;
+}
+.ant-menu-submenu-title {
+  display: flex;
+  align-items: center;
+}
+.fold-styled {
+  display: flex;
+  justify-content: center;
+  > div {
+    display: flex;
+    justify-content: center;
+    > img {
+      margin-left: 18px;
+    }
+  }
+}
+
+.index-title {
+  margin-left: -4px !important;
+}
+.ant-modal-title {
+  font-size: 20px;
+}
+.ant-checkbox-group {
+  display: flex;
+  flex-direction: column;
+  .ant-checkbox-wrapper.ant-checkbox-group-item {
+    padding: 14px 0;
+    //font-weight: bold;
+    font-size: 14px;
+  }
+}
+.ant-table-header {
+  .ant-table-thead {
+    > tr {
+      .ant-table-cell {
+        height: 44px !important;
+        padding: 2px 8px !important;
+        line-height: 44px !important;
+      }
+    }
+  }
+}
+.container .ant-table-body .ant-table-row {
+  height: 44px !important;
+}
+
+.examinerinFormation {
+  height: 100%;
+}
+
+.left5px {
+  margin-left: -5px;
+}
+
+// 头部消失
+#root {
+  > div {
+    position: relative;
+    > .ant-layout {
+      top: -200px;
+    }
+  }
+}

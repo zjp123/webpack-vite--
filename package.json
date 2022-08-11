@@ -1,0 +1,119 @@
+{
+  "name": "jxt-paperless",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "@ant-design/charts": "^1.2.14",
+    "@ant-design/icons": "^4.0.6",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "@vitejs/plugin-react-refresh": "^1.3.6",
+    "@wangeditor/editor": "^5.0.1",
+    "@wangeditor/editor-for-react": "^1.0.2",
+    "ali-oss": "^6.7.0",
+    "antd": "4.7.0",
+    "axios": "^0.21.1",
+    "babel-plugin-import": "^1.12.2",
+    "braft-editor": "^2.3.8",
+    "classnames": "^2.2.6",
+    "connected-react-router": "^6.5.2",
+    "core-js": "^3.17.3",
+    "cross-env": "^7.0.2",
+    "dva": "^2.4.1",
+    "dva-loading": "^3.0.22",
+    "echarts": "^4.9.0",
+    "echarts-for-react": "^2.0.15-beta.1",
+    "jquery": "^3.6.0",
+    "js-base64": "^3.7.2",
+    "mockjs": "^1.1.0",
+    "moment": "^2.24.0",
+    "mutation-observer": "^1.0.3",
+    "react": "^16.13.1",
+    "react-app-polyfill": "^2.0.0",
+    "react-canvas-nest": "^1.0.10",
+    "react-cropper": "^2.1.8",
+    "react-dnd": "^14.0.3",
+    "react-dom": "^16.13.1",
+    "react-pdf": "^5.3.2",
+    "react-photo-view": "^0.5.7",
+    "react-redux": "^7.1.3",
+    "react-resizable": "^3.0.4",
+    "react-router": "^5.2.1",
+    "react-router-breadcrumbs-hoc": "^4.0.1",
+    "react-router-dom": "^5.3.0",
+    "react-scripts": "3.2.0",
+    "react-to-print": "^2.14.7",
+    "redux": "^4.0.4",
+    "redux-persist": "^6.0.0",
+    "redux-promise": "^0.6.0",
+    "screenfull": "^6.0.1",
+    "setprototypeof": "^1.2.0",
+    "swiper": "^6.8.4",
+    "typescript": "^3.8.3",
+    "umi": "^3.5.17",
+    "umi-request": "^1.3.9",
+    "unstated-next": "^1.1.0",
+    "use-merge-value": "^1.0.2",
+    "vite-plugin-style-import": "^2.0.0"
+  },
+  "scripts": {
+    "dev": "vite --mode development",
+    "dev-bac": "cross-env NODE_ENV='production' vite --mode production",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      "ie 9",
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "ie 9",
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@types/axios": "^0.14.0",
+    "@types/jest": "^24.0.0",
+    "@types/mockjs": "^1.0.4",
+    "@types/node": "^12.0.0",
+    "@types/react": "^16.9.0",
+    "@types/react-dom": "^16.9.0",
+    "@types/react-redux": "^7.1.7",
+    "@types/react-router-dom": "^5.1.4",
+    "@types/redux-promise": "^0.5.28",
+    "@umijs/fabric": "^2.8.1",
+    "@vitejs/plugin-react": "^2.0.0",
+    "consola": "^2.15.3",
+    "eslint": "^6.8.0",
+    "prettier": "1.18.2",
+    "redux-devtools": "^3.5.0",
+    "typescript": "^4.6.4",
+    "less": "^3.11.1",
+    "less-loader": "^5.0.0",
+    "vite": "^3.0.0",
+    "vite-plugin-imp": "^2.2.0",
+    "vite-plugin-mkcert": "^1.9.0"
+  },
+  "homepage": ".",
+  "lint-staged": {
+    "*.{js,jsx}": "eslint",
+    "linters": {
+      "*.js": [
+        "eslint --fix",
+        "git add"
+      ]
+    },
+    "ignore": [
+      "**/static/**/*.js"
+    ]
+  }
+}

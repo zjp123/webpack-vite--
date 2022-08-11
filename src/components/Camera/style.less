@@ -1,0 +1,23 @@
+.camera {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 200px;
+    margin-bottom: 8px;
+    border: 1px dashed #d9d9d9;
+    border-radius: 2px;
+    cursor: pointer;
+    &:hover {
+        border-color: '#409EFF'
+    }
+    .title {
+        text-align: center;
+        .text {
+            margin-top: 8px;
+        }
+    }
+    &.uploaded {
+        border: 1px solid #d9d9d9;
+    }
+}

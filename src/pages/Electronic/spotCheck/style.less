@@ -1,0 +1,134 @@
+*,
+div,
+ul,
+li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.ant-progress-inner {
+    width: 140px;
+}
+.ant-progress-outer {
+    width: 29%;
+}
+.checkspotCheckPage_ul {
+    font-size: 12px;
+    overflow-y: scroll;
+    .cuts {
+        width: 100%;
+        margin: 10px 0;
+        height: 1px;
+        background: #e9e9e9;
+    }
+    li {
+        background-color: #fff;
+        margin-bottom: 5px;
+        padding: 5px;
+        .tit {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+            div {
+                display: flex;
+                align-items: center;
+            }
+        }
+        b {
+            margin-left: 10px;
+            font-size: 18px;
+        }
+        .span_btn {
+            text-align: center;
+            display: inline-block;
+            width: 54px;
+            color: #fff;
+            border-radius: 12px;
+        }
+        .ant-tabs-tab {
+            background-color: #e4dfdc !important;
+        }
+        .pan {
+            padding: 8px 16px;
+        }
+        .bai {
+            background-color: #fafafa !important;
+        }
+        .nothing {
+            background-color: #f6f6f6 !important;
+        }
+
+        .text {
+            &::after {
+                content: '';
+                display: inline-block;
+                position: absolute;
+                width: 4px;
+                height: 4px;
+                background-color: red;
+                border-radius: 100%;
+                top: 0;
+                right: 0;
+            }
+        }
+
+        .ant-tabs-card > .ant-tabs-nav .ant-tabs-tab,
+        .ant-tabs-card > div > .ant-tabs-nav .ant-tabs-tab {
+            padding: 0;
+        }
+    }
+    .ele-tag {
+        cursor: pointer;
+        position: absolute;
+        top: 60px;
+        right: -3px;
+        margin-left: 20px;
+        height: 32px;
+        width: 88px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+    }
+    .img-box {
+        width: 120x;
+        border-radius: 6px;
+        border: 1px solid #cecece;
+        position: relative;
+        .pic-des {
+            width: 120px;
+            margin-top: 3px;
+            display: flex;
+            flex-direction: column;
+            height: 49%;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 0px 0px 6px 6px;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 12px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+    }
+    .base_ul {
+        display: flex;
+        flex-wrap: wrap;
+        li {
+            width: 23%;
+        }
+    }
+}
+
+.electron-card {
+    .ant-progress {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .ant-progress-text {
+        margin-left: 100px;
+    }
+}

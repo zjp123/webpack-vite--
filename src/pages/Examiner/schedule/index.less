@@ -1,0 +1,143 @@
+// 考试预约管理 兼容 flex 布局重构
+// 分割线
+.divider_horizontal {
+  margin: 6px 24px;
+  height: 1px;
+  // background: #f0f2f5;
+}
+
+.schedule_container {
+  // background-color: #f0f2f5;
+  font-family: PingFangSC-Medium, PingFang SC;
+
+  // flex 容器
+  .outer_flex_container {
+    /** 这种布局,适合 子元素固定宽度的时候, 比较方便 */
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-right: -10px; // 去掉最后一个元素右边距
+
+    // flex 元素
+    .inner_flex_item_card {
+      width: 392px;
+      height: 232px;
+      background-color: #FFFFFF;
+      margin: 0px 10px 10px 0;
+      padding-top: 24px;
+      box-sizing: border-box;
+      /** 剩余空间太大的时候, list 均分剩余空间 */
+      flex-grow: 1;
+
+      // 日期和状态
+      .date_title_status {
+        .left, .right {
+          flex-basis: 49%;
+          text-align: left;
+        }
+
+        .left {
+          .date {
+            font-size: 20px;
+            font-weight: 500;
+            color: #000000;
+            line-height: 20px;
+          }
+        }
+
+        .right {
+          .status {
+            width: 64px;
+            border-radius: 12px;
+            border: 1px solid #FFFFFF;
+            text-align: center;
+
+            span {
+              height: 20px;
+              font-size: 12px;
+              font-weight: 400;
+              color: #FFFFFF;
+              line-height: 20px;
+            }
+          }
+        }
+      }
+
+      // 人数描述
+      .num_desc {
+        margin-top: 24px;
+
+        .left, .right {
+          flex-basis: 49%;
+        }
+
+        .left, .right {
+          .number {
+            height: 28px;
+            font-size: 28px;
+            color: #000000;
+            line-height: 28px;
+
+            span {
+              font-size: 14px;
+            }
+          }
+
+          .number_desc {
+            margin-top: 8px;
+            height: 14px;
+            font-size: 14px;
+            font-weight: 400;
+            color: #999999;
+            line-height: 14px;
+          }
+        }
+      }
+
+      // 科目
+      .subject {
+        margin: 16px auto;
+
+        .left, .right {
+          flex-basis: 49%;
+          text-align: left;
+          height: 16px;
+          font-size: 16px;
+          font-weight: 400;
+          color: #333333;
+          line-height: 16px;
+        }
+      }
+
+      // 科目描述
+      .subject_desc {
+        height: 48px; // 剩余48px
+
+        .left, .right {
+          flex-basis: 49%;
+          height: 16px;
+          font-size: 16px;
+          font-weight: 400;
+          color: #999999;
+          line-height: 48px;
+        }
+      }
+
+      .date_title_status, .num_desc, .subject, .subject_desc {
+        margin-left: 24px;
+        // 每一行都是flex容器
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+
+    // 空占位元素i
+    i {
+      /* 和列表一样的宽度相同 和 列表的margin值相同 */
+      width: 392px;
+      margin-right: 10px;
+      /** 剩余空间太大的时候, i 和 list 均分剩余空间 */
+      flex-grow: 1;
+    }
+  }
+}

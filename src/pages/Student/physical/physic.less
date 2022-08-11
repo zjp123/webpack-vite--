@@ -1,0 +1,457 @@
+// 体检信息采集 优化内容
+.physical_info_collect_container {
+  background-color: #f9f9f9;
+
+  // 显示器容器
+  .physical_info_reading {
+    display: flex;
+    align-items: center;
+    height: 450px;
+    background-color: #ffffff;
+
+    // 显示器文字描述
+    .card_monitor_container {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      align-items: center;
+
+      // 显示器和文字布局
+      .pic_and_desc {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .img {
+          text-align: center;
+        }
+        .desc_top,
+        .desc_bottom {
+          margin-top: 20px;
+          color: #333333;
+          font-weight: 400;
+          font-size: 16px;
+          font-family: PingFangSC-Regular, PingFang SC;
+          line-height: 16px;
+          .manual_write_button {
+            color: #1890ff;
+            font-size: 18px;
+            text-decoration: underline;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+
+  // 信息详情列表
+  .info_detail_container {
+    //height: 217px;
+    margin-top: 5px;
+    overflow: hidden; // 开启元素BFC, 防止子元素设置margin-top, 引起父元素下坠
+    background-color: #ffffff;
+    .top_title {
+      margin: 10px 0 5px 10px;
+      color: #000000;
+      font-weight: 500;
+      font-size: 18px;
+      font-family: PingFangSC-Medium, PingFang SC;
+      line-height: 18px;
+    }
+
+    .bottom_info_container {
+      display: flex;
+      align-items: center;
+      background-clip: content-box;
+
+      .bottom_info_detail {
+        display: flex;
+        width: 100%;
+        height: 100%;
+
+        //左侧信息
+        .left_detail {
+          flex-grow: 1;
+          height: 100%;
+          margin-top: 5px;
+          margin-bottom: 5px;
+          .info_card {
+          }
+        }
+
+        // 右侧身份证照片
+        .right_card_pic {
+          width: 152px; // 人脸宽
+          margin: 5px 5px;
+          border: 1px solid #d9d9d9;
+          // 没有数据时虚拟图
+          .no_data_icon,
+          .physical_face_pic {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            background: #f8f8fa;
+
+            .head {
+              width: 43px;
+              height: 43px;
+              background: #e8e8e8;
+              border-radius: 50%;
+            }
+            .body {
+              width: 100px;
+              height: 27px;
+              margin-top: 10px;
+              background: #e8e8e8;
+              border-radius: 14px;
+            }
+          }
+        }
+
+        // 右侧上传证件照
+        .upload_pic {
+          position: relative;
+          width: 152px; // 人脸宽
+          margin-top: 5px;
+          margin-right: 5px;
+          margin-bottom: 5px;
+          background-color: rgba(217, 217, 217, 0.3);
+          border: 1px solid #d9d9d9;
+          cursor: pointer;
+
+          .cross_icon {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 80%;
+            transform-origin: center;
+            .horizontal_bar,
+            .vertical_bar {
+              width: 30px;
+              height: 4px;
+              background: #006eff;
+            }
+            .vertical_bar {
+              width: 35px;
+              transform: rotateZ(90deg);
+            }
+          }
+          .sub_title {
+            height: 20%;
+            color: #006eff;
+            font-weight: 400;
+            font-family: PingFangSC-Regular, PingFang SC;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+
+  // form 部分样式
+  .info_form_container {
+    margin-top: 5px;
+    overflow: hidden; // 开启BFC
+    background-color: #ffffff;
+  }
+
+  // 下一步按钮
+  .next_step_button {
+    width: 376px;
+    height: 56px;
+    margin: 10px auto;
+    text-align: center;
+    background: #006eff;
+    border-radius: 3px;
+    cursor: pointer;
+    span {
+      height: 18px;
+      color: #ffffff;
+      font-weight: 400;
+      font-size: 18px;
+      font-family: PingFangSC-Regular, PingFang SC;
+      line-height: 56px;
+    }
+  }
+}
+
+// 体检信息检查项
+.physical_check_list_container {
+  // title
+  .physical_check_title {
+    position: relative;
+    height: 64px;
+    color: rgba(0, 0, 0, 0.85);
+    font-weight: 500;
+    font-size: 20px;
+    font-family: PingFangSC-Medium, PingFang SC;
+    text-align: center;
+    background-color: #ffffff;
+
+    .previous {
+      position: absolute;
+      top: 24px;
+      left: 20px;
+      line-height: 20px;
+      cursor: pointer;
+      img,
+      span {
+        vertical-align: middle;
+      }
+    }
+    .title {
+      line-height: 64px;
+    }
+  }
+
+  //  体检告知项
+  .physical_check_notify_container {
+    margin-top: 2px;
+    background-color: #ffffff;
+
+    .notify_title_container,
+    .notify_list_container {
+      width: 80%;
+      margin: 0 auto;
+      overflow: hidden; // 开启BFC,防止跟随子元素下坠
+
+      .notify_title {
+        margin-top: 24px;
+        margin-bottom: 24px;
+        font-size: 20px;
+
+        .warning_icon {
+          color: red;
+        }
+        .warning_desc {
+          font-weight: 400;
+          font-family: PingFangSC-Regular, PingFang SC;
+          vertical-align: top;
+        }
+      }
+
+      // 法律责任声明
+      .legal_duty {
+        margin: 20px auto;
+        color: #ff4949;
+        font-weight: 400;
+        font-size: 20px;
+        font-family: PingFangSC-Regular, PingFang SC;
+      }
+    }
+  }
+
+  //   体检内容 form
+  .physical_check_form_container {
+    margin-top: 2px;
+    overflow: hidden; // 开启BFC,防止跟随子元素下坠
+    background-color: #ffffff;
+
+    .form_title,
+    .form_inner {
+      width: 80%;
+      margin: 0 auto;
+    }
+    .form_title {
+      margin: 20px auto;
+      font-weight: 400;
+      font-size: 20px;
+      font-family: PingFangSC-Regular, PingFang SC;
+      span {
+        color: #ff4949;
+      }
+    }
+    .form_inner {
+      .ratio_desc {
+        margin-right: 10px;
+        font-weight: 500;
+      }
+    }
+
+    //  按钮
+    .next_step_button {
+      width: 376px;
+      height: 56px;
+      margin: 30px auto;
+      color: #ffffff;
+      font-size: 18px;
+      line-height: 56px;
+      text-align: center;
+      background: #006eff;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+  }
+}
+
+// 体检单详情
+.medical_examination_report_container {
+  display: flex;
+  height: 100%;
+  background-color: #f9f9f9;
+
+  .left_examination_report,
+  .right_applicant_signing {
+    flex-basis: 50%;
+    background-color: #ffffff;
+    .report_top_title,
+    .signing_top_title {
+      height: 67px;
+      .divider_horizontal {
+        height: 1px;
+        background: #e9e9e9;
+      }
+    }
+    .report_top_title,
+    .signing_top_title {
+      .go_back {
+        margin-left: 20px;
+        color: rgba(0, 0, 0, 0.85);
+        font-weight: 500;
+        font-size: 20px;
+        font-family: PingFangSC-Medium, PingFang SC;
+        line-height: 67px;
+        cursor: pointer;
+        img,
+        span {
+          vertical-align: middle;
+        }
+      }
+      .signing_title_text {
+        color: #000000;
+        font-weight: 500;
+        font-size: 20px;
+        font-family: PingFangSC-Medium, PingFang SC;
+        line-height: 67px;
+        text-align: center;
+      }
+    }
+  }
+
+  // 左侧体检单
+  .left_examination_report {
+    margin-right: 5px;
+    .report_bottom_pic {
+      width: 100%;
+      height: 100%;
+      .real_report_pic {
+        width: 90%;
+        height: 80%;
+        margin: 10px 5%;
+        //background-color: green;
+      }
+    }
+  }
+
+  // 右侧申请人签字页
+  .right_applicant_signing {
+    //background-color: red;
+    display: flex;
+    flex-direction: column;
+
+    // 签字版容器
+    .signing_container {
+      display: flex;
+      flex-grow: 1;
+      align-items: center;
+      justify-content: center;
+
+      .confirm_btn {
+        width: 80px;
+        height: 32px;
+        margin-right: 15px;
+        color: #ffffff;
+        font-weight: 400;
+        font-size: 14px;
+        font-family: PingFangSC-Regular, PingFang SC;
+        line-height: 32px;
+        text-align: center;
+        background: #006eff;
+        border-radius: 2px;
+        cursor: pointer;
+      }
+    }
+
+    // 底部下一步按钮容器
+    .bottom_btn_container {
+      height: 70px;
+      margin-bottom: 0;
+
+      .confirm_and_next_step {
+        width: 376px;
+        height: 60px;
+        margin: 5px auto;
+        text-align: center;
+        background: #006eff;
+        border-radius: 3px;
+        cursor: pointer;
+        span {
+          color: #ffffff;
+          font-weight: 400;
+          font-size: 18px;
+          font-family: PingFangSC-Regular, PingFang SC;
+          line-height: 60px;
+        }
+      }
+    }
+  }
+}
+
+// 体检信息提交成功
+.physical_examination_info_submitted {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background-color: #ffffff;
+
+  //background-color: pink;
+  .success_title {
+    margin-top: 20px;
+    color: rgba(0, 0, 0, 0.85);
+    font-weight: 500;
+    font-size: 25px;
+    font-family: PingFangSC-Medium, PingFang SC;
+  }
+  .success_sub_title {
+    margin-top: 15px;
+    color: rgba(0, 0, 0, 0.45);
+    font-weight: 400;
+    font-size: 14px;
+    font-family: PingFangSC-Regular, PingFang SC;
+    line-height: 14px;
+  }
+  .success_bottom_btn {
+    display: flex;
+    margin-top: 28px;
+    .check_examination_report {
+      width: 89px;
+      height: 40px;
+      margin-right: 15px;
+      color: #006eff;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 40px;
+      text-align: center;
+      background: #f5f9ff;
+      border: 1px solid #006eff;
+      border-radius: 2px;
+    }
+    .to_first_page {
+      width: 128px;
+      height: 40px;
+      color: #ffffff;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 40px;
+      text-align: center;
+      background: #006eff;
+      border-radius: 2px;
+    }
+  }
+}

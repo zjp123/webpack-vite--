@@ -1,0 +1,89 @@
+// 首页
+.index_page_container {
+
+  .index_page_banner {
+    overflow: hidden;
+
+    // title 通用样式
+    .title {
+      font-size: 24px;
+      font-family: PingFangSC-Regular, PingFang SC;
+      font-weight: 400;
+      color: #FFFFFF;
+      line-height: 24px;
+      opacity: .9;
+      //margin-left: 10px; // 统一左边距 10px
+    }
+
+    // span 通用样式
+    span {
+      font-size: 14px;
+      font-family: PingFangSC-Regular, PingFang SC;
+      font-weight: 400;
+      color: #FFFFFF;
+      line-height: 14px;
+      opacity: .7;
+    }
+
+    // 只有一条数据时样式
+    .one_bunch_data {
+      margin: 10px 10px; // 统计左边距10px
+      display: flex;
+      //margin-left: 10px; // 统一左边距 10px
+
+      .one_left {
+        display: flex;
+        flex-direction: column;
+
+        .one_left_data {
+          margin-top: 15px;
+        }
+      }
+
+      .one_right {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+      }
+
+      .one_divider_vertical {
+        height: 50px;
+        border-right: 1px solid rgba(255, 255, 255, .7);
+        margin: 5px 30px;
+      }
+    }
+
+    // 多条数据时
+    .more_than_one_data {
+      margin: 10px 0;
+
+      .title {
+        margin-left: 10px; // 距离左边距10px
+      }
+
+      .list {
+        display: flex;
+        padding-top: 15px;
+        box-sizing: border-box;
+        margin-left: 10px; // 统一左边距 10px
+
+        .divider_horizontal {
+          width: 100%;
+          border-bottom: 1px solid rgba(255, 255, 255, .7);
+          margin: 10px auto;
+        }
+
+        .divider_vertical {
+          border-right: 1px solid rgba(255, 255, 255, .7);
+          margin: 0 30px;
+        }
+
+        .list_right {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+        }
+      }
+    }
+  }
+}

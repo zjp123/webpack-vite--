@@ -1,0 +1,154 @@
+.resign_container {
+  position: relative;
+
+  .resign_content {
+    width: 1024px;
+    height: 720px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -512px;
+    margin-top: -360px;
+
+    .card_monitor {
+      width: 500px;
+      height: 300px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin-left: -250px;
+      margin-top: -150px;
+      text-align: center;
+
+      div:nth-of-type(1) {
+        margin-top: 30px;
+        margin-bottom: 15px;
+      }
+
+      span.manual_write {
+        color: #1890FF;
+        text-decoration: underline;
+        font-size: 18px;
+      }
+
+      span.manual_write:hover {
+        cursor: pointer;
+      }
+
+      span.manual_write:active {
+        color: red;
+      }
+    }
+  }
+
+  // 考生签名
+  .pdf_container {
+    text-align: center;
+
+    .pdf_btn_sign {
+      display: inline-block;
+      width: 200px;
+      height: 60px;
+      background: #327ef8;
+      border-radius: 4px;
+      cursor: pointer;
+
+      & > span {
+        width: 72px;
+        height: 18px;
+        font-size: 18px;
+        font-family: PingFangSC-Regular, PingFang SC;
+        font-weight: 400;
+        color: #ffffff;
+        line-height: 60px;
+
+      }
+    }
+
+
+    .pdf_btn_has_unsign {
+      display: inline-block;
+      height: 40px;
+      border-radius: 4px;
+
+      .btn_content {
+        display: flex;
+        justify-content: space-between;
+
+        .to_signing_btn, .to_close_btn {
+          font-size: 16px;
+          font-family: PingFangSC-Regular, PingFang SC;
+          font-weight: 400;
+          color: #ffffff;
+          line-height: 40px;
+          padding: 2px;
+          box-sizing: border-box;
+          cursor: pointer;
+        }
+
+        .to_signing_btn {
+          width: 300px;
+          background-color: #FF8D49;
+        }
+
+        .to_close_btn {
+          margin-left: 10px;
+          width: 120px;
+          background: #FF8D49;;
+        }
+      }
+    }
+  }
+
+  // 成绩单签字
+  .examiner_signing_container {
+    height: 100%;
+    padding-top: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .examiner_signing_content {
+      .examiner_pic {
+        border: 1px dashed gray;
+        width: 200px;
+        height: 200px;
+        margin: 0 auto;
+      }
+
+      .examiner_sign {
+        border: 1px dashed gray;
+        width: 250px;
+        height: 150px;
+        background-color: lightcyan;
+        margin: 10px auto;
+      }
+
+      .examiner_desc {
+        margin: 0 auto;
+        text-align: center;
+        color: #2f54eb;
+
+        .examiner_sign_btn {
+          width: 200px;
+          height: 35px;
+          font-size: 25px;
+          background: green;
+          color: #ffffff;
+          line-height: 35px;
+          margin: 0 auto;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+.placeholder-div {
+  display: flex;
+  justify-content: center;
+}
+
+

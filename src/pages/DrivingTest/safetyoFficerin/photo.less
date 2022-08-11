@@ -1,0 +1,72 @@
+@height: 100%;
+.student_photo {
+  width: 300px;
+  height: 300px;
+  margin: 0 !important;
+  > div {
+    height: @height;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .init {
+      width: 200px;
+      height: 200px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      > button {
+        margin: 0 10px;
+      }
+    }
+    .photo {
+      >button {
+        margin-top: 10px;
+        margin-left: 70px;
+      }
+    }
+    .echo {
+      width: 100%;
+      height: @height;
+      position: relative;
+      .echo-icon {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        z-index: 999;
+        margin: 0;
+        cursor: pointer;
+      }
+      .ant-image {
+        width: 100%;
+        height: @height;
+        img{
+          height: @height;
+        }
+      }
+    }
+  }
+  .student_photo_camera {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .ant-upload-picture-card-wrapper {
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .ant-upload.ant-upload-select-picture-card  {
+      margin: 0 !important;
+      width: @height !important;
+      height: 200px;
+    }
+  }
+  .btn {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    button:nth-child(2) {
+      margin-left: 30px;
+    }
+  }
+}

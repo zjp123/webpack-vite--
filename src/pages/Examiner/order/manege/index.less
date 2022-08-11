@@ -1,0 +1,127 @@
+// 考试管理页面 外层大的页面
+.examination_manage_container {
+  height: 100%;
+  display: flex;
+  /*2. 主轴居中 */
+  justify-content: center;
+  /*3. 交叉轴居中 */
+  align-items: center;
+
+  // 人脸识别框
+  .face_recognize_container {
+    width: 600px;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+
+    .face_recognize_desc {
+      margin-top: 20px;
+
+      .face_recognize_suggest, .face_recognize_finish {
+        font-size: 18px;
+        font-family: PingFangSC-Medium, PingFang SC;
+        font-weight: 500;
+        color: rgba(0, 0, 0, 0.85);
+        line-height: 25px;
+        margin-bottom: 5px;
+      }
+
+      .face_recognize_pwd {
+        cursor: pointer;
+        display: inline-block;
+        margin-top: 20px;
+        font-size: 14px;
+        font-family: PingFangSC-Regular, PingFang SC;
+        font-weight: 400;
+        color: #006EFF;
+        line-height: 14px;
+      }
+    }
+  }
+
+  // 签字区域
+  .manage_signature_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 600px;
+    height: 600px;
+
+
+    .signature_confirm_btn {
+      margin-top: 10px;
+      width: 200px;
+      text-align: center;
+      height: 30px;
+      font-size: 20px;
+      line-height: 30px;
+      background-color: green;
+      color: white;
+      cursor: pointer;
+    }
+  }
+}
+
+// 人脸认证失败 输入密码框
+.failed_conatiner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #FFFFFF;
+  border-radius: 4px;
+  text-align: center;
+
+
+  .i_failed {
+    width: 60px;
+    height: 60px;
+    margin: 30px auto;
+    background-color: #FF4D4F;
+    border-radius: 50%;
+    color: #FFFFFF;
+    text-align: center;
+    line-height: 60px;
+    font-size: 25px;
+  }
+
+  .description {
+
+  }
+
+  .description p {
+    margin-top: 10px;
+  }
+
+  .description p:nth-child(1) {
+
+    font-size: 16px;
+    color: #000000;
+  }
+
+  .description p:nth-child(2) {
+    display: inline-block;
+    width: 213px;
+    height: 40px;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.65);
+    line-height: 20px;
+  }
+
+  .form_container {
+    //display: inline-block;
+    margin: 10px auto;
+
+    .form_container {
+      .form_container_input {
+        display: inline-block;
+        width: 100%;
+      }
+    }
+  }
+}

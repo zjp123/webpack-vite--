@@ -1,0 +1,99 @@
+.poto {
+  margin: 80px 0 40px;
+  display: flex;
+  list-style: none;
+  // border: 1px solid red;
+  //flex-wrap: wrap;
+  justify-content: center;
+  .flex-center-column {
+    .ant-image {
+      border: 1px dashed #aaa;
+      display: flex;
+      justify-content: center;
+      // height: auto;
+      box-sizing: content-box;
+      img {
+        display: block;
+        margin: 0;
+        width: auto;
+        max-width: 100%;
+      }
+    }
+  }
+  .flex-center-column {
+    &:first-child {
+      margin-right: 80px;
+    }
+  }
+}
+.poto2 {
+  // margin: 0 auto;
+  justify-content: center;
+  display: flex;
+  list-style: none;
+  // border: 1px solid red;
+}
+
+.pass-btn {
+  width: 396px;
+  height: 64px;
+  background: #006eff;
+  border-radius: 2px;
+  font-size: 18px;
+  color: #ffffff;
+  // margin-right: 6px;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.refuse-btn {
+  width: 180px;
+  height: 64px;
+  font-size: 18px;
+  padding: 0;
+  margin-left: 24px;
+  color: #006eff;
+  background: #f5f9ff;
+  border-radius: 2px;
+  border: 1px solid #006eff;
+  box-sizing: border-box;
+}
+
+.mt24 {
+  margin-top: 24px;
+}
+
+.shanchu {
+  height: 55px;
+  margin-right: 8px;
+  display: block;
+  margin: 0 auto;
+}
+h4 {
+  margin: 0 auto;
+  text-align: center;
+}
+p {
+  text-align: center;
+}
+.person-card {
+  .ant-card-body {
+    padding-top: 0;
+  }
+  .person-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    p {
+      margin: 0;
+      padding: 0;
+      color: #333;
+      font-size: 16px;
+      font-weight: bold;
+    }
+    .ant-btn {
+      margin: 0;
+    }
+  }
+}

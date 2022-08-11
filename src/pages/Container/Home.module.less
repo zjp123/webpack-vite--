@@ -1,0 +1,117 @@
+.container {
+  width: 100vw;
+  list-style: none;
+}
+
+.titileImg {
+  width: auto;
+  height: 38px;
+}
+
+.menu {
+  position: fixed;
+  height: 100vh;
+  overflow-y: auto;
+  box-shadow: 2px 0 6px rgba(0, 21, 41, 0.35);
+
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+}
+
+.content {
+  display: flex;
+  flex: auto;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  margin-left: 208px;
+  overflow-x: hidden;
+  transition: margin 0.2s;
+
+  &.collapsed {
+    margin-left: 80px;
+  }
+
+  .mainContent {
+    margin: 0 16px 16px;
+    padding: 16px;
+    overflow: auto;
+    // background: @component-background;
+    transition: all 0.5s;
+  }
+}
+
+/** 修改之前样式位置, 层级嵌套 */
+.homeContent {
+  display: flex;
+  align-items: center;
+  height: 68px; // 注释掉 头部 高 68px 问题, 暂且看头部是否会因为样式在360浏览器问题消失
+  background: #003c7f;
+
+  .headerLeftContent {
+    display: flex;
+    margin: 13px 0 0 16px;
+
+    .headersImg {
+      width: 42px;
+      height: 42px;
+    }
+
+    .titleContent {
+      margin-left: 12px;
+      color: #ffffff;
+
+      .titleName {
+        font-size: 16px;
+        font-family: FZLTZHJW--GB1-0, FZLTZHJW--GB1;
+        line-height: 19px;
+      }
+
+      .titleDes {
+        margin-top: 4px;
+        color: #ffffff;
+        font-size: 12px;
+        font-family: FZLTZHJW--GB1-0, FZLTZHJW--GB1;
+        line-height: 14px;
+        text-align: justify;
+        -moz-text-align-last: justify;
+        -webkit-text-align-last: justify;
+        text-align-last: justify;
+        text-justify: distribute-all-lines; /*ie6-8*/ /* ie9*/ /*ff*/ /*chrome 20+*/
+      }
+    }
+
+    .titleCuts {
+      width: 2px;
+      height: 36px;
+      margin: 0 16px 0 12px;
+      background: #ffffff;
+      opacity: 0.7;
+    }
+
+    .nameSpace {
+      margin-top: 2px;
+      color: #ffffff;
+      font-size: 12px;
+      font-family: FZLTZHJW--GB1-0, FZLTZHJW--GB1;
+      line-height: 12px;
+
+      .rTime {
+        margin-top: 8px;
+      }
+    }
+  }
+
+  .headerRightContent {
+    position: absolute;
+    right: 0;
+    padding: 0 30px;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &:hover {
+      background: rgba(0, 0, 0, 0.025);
+    }
+  }
+}

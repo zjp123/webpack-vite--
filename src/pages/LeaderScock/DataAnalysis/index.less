@@ -1,0 +1,455 @@
+// 考生数据分析
+.examinee_portal_container {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99999;
+  font-size: 16px;
+  color: #fff;
+  box-sizing: border-box;
+
+  // width: 100%;
+  // height: 100%;
+  // overflow-x: hidden;
+  // overflow-y: scroll;
+  font-family: GemunuLibre-Bold;
+  .render-wrap {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    height: 100%;
+    /* 考生数据分析头部*/
+    .examinee_portal_title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 98px;
+      padding: 0 30px;
+
+      .left,
+      .center,
+      .right {
+        display: inline-block;
+        color: #badfff;
+        font-size: 18px;
+        line-height: 98px;
+      }
+
+      // .left {
+      //   // width: 161px;
+      //   // margin-left: 50px;
+      // }
+      .center {
+        // width: 498px;
+        color: #ffffff;
+        font-size: 42px;
+        font-family: HYYaKuHei-85J;
+        text-align: center;
+      }
+    }
+
+    /* 分割线 */
+    .examinee_portal_line {
+      font-size: 0; // 勿删, 影响图片高度计算
+      display: flex;
+      justify-content: center;
+      img {
+        width: 100%;
+      }
+    }
+
+    /* 数字描述部分 */
+    .number_desc_container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 30px;
+      // .left {
+      //   margin-left: 50px;
+      // }
+      // .right {
+      //   margin-right: 50px;
+      // }
+
+      .left,
+      .second,
+      .third,
+      .right {
+        // margin-top: 40px;
+        color: #ffffff;
+
+        .top {
+          color: #badfff;
+          font-weight: bold;
+          font-size: 22px;
+          font-family: PingFang SC;
+        }
+        .bottom {
+          font-weight: bold;
+          font-size: 40px;
+          font-family: Gemunu Libre;
+        }
+      }
+    }
+
+    /* 图表部分 */
+    .examinee_charts_container {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      height: 0;
+      // 图表部分
+      .top,
+      .bottom {
+        display: flex;
+        flex: 1;
+        justify-content: space-between;
+        width: 100%;
+        // height: 100%;
+        height: 0;
+        box-sizing: border-box;
+        padding: 0 10px;
+
+        .left,
+        .center,
+        .right {
+          position: relative;
+          /** 剩余空间太大的时候, list 均分剩余空间 */
+          // flex-grow: 1;
+          // width: 600px;
+          // height: 378px;
+          // margin-right: 10px;
+          display: flex;
+          flex-direction: column;
+          flex: 1;
+          width: 100%;
+          height: 100%;
+          background: #0b2247;
+          border: 1px solid rgba(47, 146, 214, 0.6);
+          //opacity: 0.4;
+
+          /* 四个角的着色 */
+          .left_top,
+          .right_top,
+          .right_bottom,
+          .left_bottom {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+          }
+
+          .left_top {
+            top: -1px;
+            left: -1px;
+            border-top: 2px solid rgba(47, 146, 214, 1);
+            border-left: 2px solid rgba(47, 146, 214, 1);
+          }
+          .right_top {
+            top: -1px;
+            right: -1px;
+            border-top: 2px solid rgba(47, 146, 214, 1);
+            border-right: 2px solid rgba(47, 146, 214, 1);
+          }
+          .right_bottom {
+            right: -1px;
+            bottom: -1px;
+            border-right: 2px solid rgba(47, 146, 214, 1);
+            border-bottom: 2px solid rgba(47, 146, 214, 1);
+          }
+          .left_bottom {
+            bottom: -1px;
+            left: -1px;
+            border-bottom: 2px solid rgba(47, 146, 214, 1);
+            border-left: 2px solid rgba(47, 146, 214, 1);
+          }
+
+          /* 图表title */
+          .broken_line_chart_title,
+          .examinee_number_title,
+          .new_added_examinee_rank,
+          .title_bottom_line {
+            span {
+              // width: 134px;
+              // height: 21px;
+              margin-top: 23px;
+              margin-left: 23px;
+              color: #badfff;
+              font-weight: bold;
+              font-size: 22px;
+              font-family: PingFang SC;
+              line-height: 23px;
+              display: inline-block;
+              padding-bottom: 5px;
+              border-bottom: 2px solid #fff;
+            }
+          }
+
+          // .new_added_examinee_rank {
+          //   // width: 200px;
+          //   // height: 22px;
+          //   margin-top: 23px;
+          //   margin-left: 23px;
+          //   color: #badfff;
+          //   font-weight: bold;
+          //   font-size: 22px;
+          //   font-family: PingFang SC;
+          //   line-height: 23px;
+          // }
+
+          .new_added_examinee_rank_line {
+            // width: 200px;
+            // height: 2px;
+            margin-top: 5px;
+            margin-left: 23px;
+            background: #badfff;
+          }
+
+          .title_bottom_line {
+            height: 2px;
+            margin-top: 5px;
+            background: #badfff;
+          }
+        }
+        .center {
+          margin: 0 10px;
+        }
+        .broken_line_chart,
+        .water_fall_chart,
+        .rank_bar_chart {
+          display: flex;
+          flex-direction: column;
+          flex: 1;
+        }
+        // .right {
+        // margin-right: 60px; // 最后一个元素右外边距为 0
+        // }
+
+        /* 数据部分样式 */
+        // .broken_line_chart,
+        // .water_fall_chart,
+        // .rank_bar_chart {
+        //   width: 100%;
+        //   height: 90%;
+        // }
+        // .water_fall_chart {
+        //   height: 85%;
+        // }
+        // .rank_bar_chart {
+        //   height: 90%;
+        // }
+      }
+
+      // 图表下半部分
+      .bottom {
+        display: flex;
+        flex: 1;
+        justify-content: space-between;
+        width: 100%;
+        // height: 100%;
+        height: 0;
+        margin-top: 10px;
+        .left,
+        .center,
+        .right {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          flex: 1;
+          // flex-grow: 1;
+          // width: 600px;
+          // margin-top: 20px;
+          /* title 部分 */
+          .examinee_pie_chart_title,
+          .new_add_examinee_number_title {
+            span {
+              // width: 135px;
+              // height: 22px;
+              margin-top: 23px;
+              margin-left: 23px;
+              color: #badfff;
+              font-weight: bold;
+              font-size: 22px;
+              font-family: PingFang SC;
+              line-height: 23px;
+              display: inline-block;
+              padding-bottom: 5px;
+              border-bottom: 2px solid #fff;
+            }
+          }
+
+          // .examinee_pie_chart_line,
+          // .new_add_examinee_number_line {
+          //   width: 133px;
+          //   height: 2px;
+          //   margin-top: 5px;
+          //   margin-left: 23px;
+          //   background: #badfff;
+          // }
+        }
+
+        // .left {
+        //flex-grow: 1;
+        // width: 600px;
+        // .examinee_pie_chart {
+        //   width: 90%;
+        //   height: 90%;
+        //   margin-top: 5%;
+        //   margin-left: 5%;
+        // }
+        // }
+        .left {
+          flex: 1.2;
+        }
+        .center {
+          flex: 2;
+        }
+        // .new_examinee_line_chart {
+        //   width: 100%;
+        //   height: 85%;
+        // }
+        // }
+        .right {
+          flex: 0.8;
+          // width: 283px;
+          .rectangle_desc {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+
+            .sex_ratio,
+            .certificate_type,
+            .student_origin {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              // height: 125px;
+
+              .sex_ratio_inner {
+                display: flex;
+                // width: 95%;
+                // height: 100%;
+                .bar_desc_left {
+                  display: flex;
+                  flex-direction: column;
+                  flex-grow: 1;
+                  justify-content: center;
+                  margin-right: 5px;
+
+                  .bar_number {
+                    background: #254078;
+                    //opacity: 0.4;
+                    span {
+                      color: #ffffff;
+                      font-weight: bold;
+                      font-size: 25px;
+                      font-family: Gemunu Libre;
+                    }
+                  }
+                  .bar_ratio_desc {
+                    span {
+                      color: #95dcff;
+                      font-weight: bold;
+                      font-size: 16px;
+                      font-family: PingFang SC;
+                      line-height: 23px;
+                    }
+                  }
+                }
+                // .bar_center_divider {
+                // }
+                .bar_desc_right {
+                  display: flex;
+                  flex-direction: column;
+                  flex-grow: 1;
+                  justify-content: center;
+                  .bar_number {
+                    background: #dc666c;
+                    //opacity: 0.4;
+                    span {
+                      color: #ffe1e3;
+                      font-weight: bold;
+                      font-size: 25px;
+                      font-family: Gemunu Libre;
+                    }
+                  }
+                  .bar_ratio_desc {
+                    span {
+                      color: #95dcff;
+                      font-weight: bold;
+                      font-size: 16px;
+                      font-family: PingFang SC;
+                      line-height: 23px;
+                    }
+                  }
+                }
+              }
+            }
+
+            .sex_ratio_divider {
+              width: 100%;
+              height: 1px;
+              background: linear-gradient(-90deg, rgba(0, 58, 135, 0) 0%, rgba(0, 58, 135, 0.98) 51%, rgba(0, 58, 135, 0) 100%);
+            }
+          }
+        }
+        .examinee_pie_chart,
+        .new_examinee_line_chart,
+        .rectangle_desc {
+          display: flex;
+          flex-direction: column;
+          flex: 1;
+        }
+      }
+    }
+  }
+}
+
+::-webkit-scrollbar {
+  width: inherit;
+  height: inherit;
+}
+
+/**
+ 样式重构
+*/
+.right {
+  .rectangle_desc {
+    // border: 1px solid red;
+    box-sizing: border-box;
+    display: flex;
+    margin: 30px 20px;
+    justify-content: space-between !important;
+    .percentage-wrap {
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+    }
+    .row-style {
+      display: flex;
+      justify-content: space-between;
+    }
+    .num-percen {
+      .num-percen-left {
+        border-radius: 2px 0px 0px 2px;
+        color: #badfff;
+        font-size: 25px;
+        padding-left: 5px;
+        background-color: #254078;
+      }
+      .num-percen-right {
+        color: #badfff;
+        font-size: 25px;
+        padding-right: 5px;
+        text-align: right;
+        background-color: #dc666c;
+        border-radius: 0px 2px 2px 0px;
+      }
+    }
+    .text-percen {
+      font-size: 16px;
+    }
+  }
+}
