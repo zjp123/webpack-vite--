@@ -1,3 +1,4 @@
+/* eslint-disable react/react-in-jsx-scope */
 // ie polyfill
 import "./polyfill"
 import "react-app-polyfill/ie9"
@@ -38,7 +39,7 @@ app.use(createLoading())
 app.model(globalModel)
 
 // 3. Register global model
-app.router((props) => {
+app.router((props: any) => {
   registerHistoy(props.history) // 注册history对象
   return <ReduxProvider store={store}>
     <PersistGate loading={null} persistor={persistor}>
